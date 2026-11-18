@@ -5,7 +5,7 @@ export function GigPreview({ gig }) {
   return (
 
     <article className="gig-preview">
-      <img className='gig-img' src="https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993684/54cffd5e371a90afc005d388f51f164ab63a4965.webp" alt="" />
+      <img className='gig-img' src={gig.imgUrls[0]} alt="" />
       
       <div>
       {gig.owner && (
