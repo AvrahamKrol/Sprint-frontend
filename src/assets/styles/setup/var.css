@@ -18,17 +18,17 @@
 } */
 
 :root {
-  --clr-main: #1DBF73;
-  --clr-main-hov: #19A463;
+  --clr-black: #222325;
+  --clr-black-hov: #404145;
 
-  --clr-txt: #222325;
-  --clr-txt-2: #62646A;
+  --clr-white: #fff;
 
-  --clr-background: #fff;
+  --clr-gray: #c5c6c9;
+  --clr-gray-hov: #f5f5f5;
+  --clr-gray-dark: #62646a;
+  --clr-gray-darkest: #404145;
 
   --clr-star: #FFBE5B;
-
-  --clr-border: #E4E5E7;
 
   --success: #DFF5E9;
   --warning: #FFF1D6;

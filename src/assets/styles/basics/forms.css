@@ -1,14 +1,14 @@
-
 button {
-	padding: .5em .8em;
+	padding: .75em .8em;
 	border: 0;
 	margin: .5em;
 	cursor: pointer;
-	background-color: var(--clr1);
-	color: whitesmoke;
+	background-color: var(--clr-black);
+	color: var(--clr-white);
+	border-radius: var(--radius-sm);
 }
 
 button:hover {
 	transition: 0.3s;
-	background-color: var(--clr1-light)
+	background-color: var(--clr-black-hov)
 }
