@@ -24,7 +24,7 @@ p {
 
 a {
     text-decoration: none;
-    color: var(--clr-main);
+    color: unset;
 }
 
 a:hover {

@@ -17,7 +17,7 @@
   --error: #B42318;
 } */
 
-root {
+:root {
   --clr-main: #1DBF73;
   --clr-main-hov: #19A463;
 
