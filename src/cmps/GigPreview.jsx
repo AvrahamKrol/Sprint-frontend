@@ -5,13 +5,13 @@ export function GigPreview({ gig }) {
   return (
 
     <article className="gig-preview">
-      <img className='gig-img' src="https://fiverr-res.cloudinary.com/t_gig_cards_web_x2,q_auto,f_auto/gigs/500163883/original/45437098ad9bba425611a48f21dfa08523d6dea5.png" alt="" />
+      <img className='gig-img' src="https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993684/54cffd5e371a90afc005d388f51f164ab63a4965.webp" alt="" />
       
       <div>
       {gig.owner && (
         <div className='owner-name-div'>
           
-        <img className="owner-img" src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/d746c8ce057b5a3f3302702c86c39edf-1780203553042/bb4e6461-43aa-4da8-865b-0e90c69129ca.png" alt="" />
+        <img className="owner-img" src="https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp" alt="" />
 
         <p className="gig-owner">{gig.owner.fullname} </p>
         </div>
