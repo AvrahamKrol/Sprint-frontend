@@ -2,7 +2,7 @@
   --clr1: #ce2e6c;
   --clr2: #4f3a65;
   --clr3: #574f7d;
-  --clr4: #95adbe;
+  --clr4: #404145;
   --clr5: #dff0ea;
 
   --clr1-light: color-mix(in lab, var(--clr1), white 15%);
@@ -14,4 +14,6 @@
 
   --success: rgb(41, 189, 73);
   --error: rgb(216, 59, 59);
+
+  --min-column-size:300px
 }

@@ -2,8 +2,6 @@ import { storageService } from '../async-storage.service'
 import { makeId } from '../util.service'
 import { userService } from '../user'
 
-import { saveToStorage } from '../util.service'
-
 const STORAGE_KEY = 'gig'
 
 export const gigService = {
@@ -109,9 +107,9 @@ const gigs = [
 ]
 
 
-async function query(filterBy = { txt: '', price:0}) {
+async function query(filterBy = { txt: '', minPrice:0}) {
   var gigs = await storageService.query(STORAGE_KEY)
-  const { txt, price } = filterBy
+  const { txt, minPrice } = filterBy
 
   if (txt) {
     const regex = new RegExp(filterBy.txt, 'i')
@@ -119,8 +117,8 @@ async function query(filterBy = { txt: '', price:0}) {
       (gig) => regex.test(gig.description),
     )
   }
-  if (price) {
-    gigs = gigs.filter((gig) => gig.price >= price)
+  if (minPrice) {
+    gigs = gigs.filter((gig) => gig.price >= minPrice)
   }
   // if (sortField === 'vendor') {
   //   gigs.sort(

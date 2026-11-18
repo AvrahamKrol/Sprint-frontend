@@ -4,15 +4,21 @@ export function GigPreview({ gig }) {
   return (
 
     <article className="gig-preview">
-      <header>
-    {gig.owner && (
-        <p>{gig.owner.fullname} </p>
+      <img className='gig-img' src="https://fiverr-res.cloudinary.com/t_gig_cards_web_x2,q_auto,f_auto/gigs/500163883/original/45437098ad9bba425611a48f21dfa08523d6dea5.png" alt="" />
+      <div>
+      {gig.owner && (
+        <div className='owner-name-div'>
+          
+        <img className="user-img" src="https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/d746c8ce057b5a3f3302702c86c39edf-1780203553042/bb4e6461-43aa-4da8-865b-0e90c69129ca.png" alt="" />
+
+        <p className="gig-owner">{gig.owner.fullname} </p>
+        </div>
       )}
-      </header>
-      <Link to={`/gig/${gig._id}`}>{gig.description}</Link>
-      <header>
+
+      <Link to={`/gig/${gig._id}`}><p href="" className='gig-link'>{gig.title}</p></Link>
+      
       <p>from: {gig.price}$</p>
-      </header>
+      </div>
 
     </article>
   )

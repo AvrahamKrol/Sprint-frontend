@@ -26,7 +26,7 @@ export function GigFilter({ filterBy, setFilterBy }) {
   }
 
   function clearFilter() {
-    setFilterToEdit({ ...filterToEdit, txt: '', minSpeed: '', maxPrice: '' })
+    setFilterToEdit({ ...filterToEdit, txt: '', minPrice: ''})
   }
 
   function clearSort() {
@@ -47,9 +47,9 @@ export function GigFilter({ filterBy, setFilterBy }) {
       <input
         type="number"
         min="0"
-        name="minSpeed"
+        name="minPrice"
         value={filterToEdit.minSpeed}
-        placeholder="min. speed"
+        placeholder="Min price"
         onChange={handleChange}
         required
       />

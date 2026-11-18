@@ -2,13 +2,25 @@
     --min-column-size: 220px;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--min-column-size), 1fr));
-    gap: .5em;
-
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2em;
+    
+    
     & li {
         display: grid;
         padding: .5em;
         background-color: #fff;
+
+    .gig-img{
+        border-radius: 10px;
+    }   
+    
+    .user-img{
+        height: 30px;
+        width: 30px;
+        margin-inline-end: 1em;
+        border-radius: 50%;
+    }
 
         .actions {
             justify-self: end;
