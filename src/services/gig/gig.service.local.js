@@ -2,6 +2,8 @@ import { storageService } from '../async-storage.service'
 import { makeId } from '../util.service'
 import { userService } from '../user'
 
+import { saveToStorage } from '../util.service'
+
 const STORAGE_KEY = 'gig'
 
 export const gigService = {
@@ -106,34 +108,35 @@ const gigs = [
 	},
 ]
 
-async function query(filterBy = { txt: '', minSpeed: 0 }) {
+
+async function query(filterBy = { txt: '', price:0}) {
   var gigs = await storageService.query(STORAGE_KEY)
-  const { txt, minSpeed, sortField, sortDir } = filterBy
+  const { txt, price } = filterBy
 
   if (txt) {
     const regex = new RegExp(filterBy.txt, 'i')
     gigs = gigs.filter(
-      (gig) => regex.test(gig.vendor) || regex.test(gig.description),
+      (gig) => regex.test(gig.description),
     )
   }
-  if (minSpeed) {
-    gigs = gigs.filter((gig) => gig.speed >= minSpeed)
+  if (price) {
+    gigs = gigs.filter((gig) => gig.price >= price)
   }
-  if (sortField === 'vendor') {
-    gigs.sort(
-      (gig1, gig2) => gig1[sortField].localeCompare(gig2[sortField]) * +sortDir,
-    )
-  }
-  if (sortField === 'speed') {
-    gigs.sort((gig1, gig2) => (gig1[sortField] - gig2[sortField]) * +sortDir)
-  }
+  // if (sortField === 'vendor') {
+  //   gigs.sort(
+  //     (gig1, gig2) => gig1[sortField].localeCompare(gig2[sortField]) * +sortDir,
+  //   )
+  // }
+  // if (sortField === 'speed') {
+  //   gigs.sort((gig1, gig2) => (gig1[sortField] - gig2[sortField]) * +sortDir)
+  // }
 
-  gigs = gigs.map(({ _id, vendor, speed, owner }) => ({
-    _id,
-    vendor,
-    speed,
-    owner,
-  }))
+  // gigs = gigs.map(({ _id, vendor, speed, owner }) => ({
+  //   _id,
+  //   vendor,
+  //   speed,
+  //   owner,
+  // }))
   return gigs
 }
 

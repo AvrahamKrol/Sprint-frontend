@@ -1,9 +1,10 @@
 .gig-preview {
-    color: var(--gray2);
+    color: var(--gray4);
 
     >header {
         font-size: 1.2em;
-        color: var(--gray1);
+        font-weight: bold;
+        color: var(--gray4);
     }
 
     & p {
