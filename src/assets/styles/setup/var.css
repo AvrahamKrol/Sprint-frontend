@@ -1,19 +1,48 @@
-:root {
-  --clr1: #ce2e6c;
-  --clr2: #4f3a65;
-  --clr3: #574f7d;
-  --clr4: #404145;
+/* :root {
+  --clr-hero: #008A37;
+  --clr-star: #FFBE5B;
+  --clr-link: #1DBF73;
   --clr5: #dff0ea;
 
-  --clr1-light: color-mix(in lab, var(--clr1), white 15%);
+  --clr-btn-text: #FFFFFF;
+  --clr1-light: clr-mix(in lab, var(--clr-hero), white 15%);
 
   --gray1: #ddd;
   --gray2: #aaa;
   --gray3: #777;
   --gray4: #333;
 
-  --success: rgb(41, 189, 73);
-  --error: rgb(216, 59, 59);
+  --success: #0E7A47;
+  --warning: #8A5A00;
+  --error: #B42318;
+} */
 
-  --min-column-size:300px
+root {
+  --clr-main: #1DBF73;
+  --clr-main-hov: #19A463;
+
+  --clr-txt: #222325;
+  --clr-txt-2: #62646A;
+
+  --clr-background: #fff;
+
+  --clr-star: #FFBE5B;
+
+  --clr-border: #E4E5E7;
+
+  --success: #DFF5E9;
+  --warning: #FFF1D6;
+  --error: #FCE4E4;
+
+  --font-main: 'Helvetica Neue', sans-serif;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
 }

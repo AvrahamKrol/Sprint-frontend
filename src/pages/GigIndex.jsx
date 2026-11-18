@@ -6,7 +6,7 @@ import {
   addGig,
   updateGig,
   removeGig,
-  addGigMsg,
+  // addGigMsg,
 } from '../store/actions/gig.actions'
 
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
