@@ -1,15 +1,27 @@
 .gig-preview {
     color: var(--gray4);
     
+    .gig-img{
+        border-radius: 10px;
+        margin-bottom: 1em;
+    }   
     
     .gig-owner{
         margin-bottom: 0;
+    }
+
+    .owner-img{
+        height: 30px;
+        width: 30px;
+        margin-inline-end: 1em;
+        border-radius: 50%;
     }
 
     p {
         font-size: 1.2em;
         font-weight: bold;
         color: var(--gray4);
+        margin: 0;
     }
 
     & .gig-link {
@@ -21,6 +33,16 @@
 }
 
 .owner-name-div{
-        display: flex;
-        margin-top: 1em;
+    display: flex;
+}
+
+.rate-div{
+   display: flex;
+   margin-bottom: 0.5em;
+}
+
+.rate-star{
+   width: 24px;
+   height: 24px;
+   margin-inline-end: .3em;
 }

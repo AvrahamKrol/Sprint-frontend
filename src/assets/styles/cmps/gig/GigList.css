@@ -11,16 +11,6 @@
         padding: .5em;
         background-color: #fff;
 
-    .gig-img{
-        border-radius: 10px;
-    }   
-    
-    .user-img{
-        height: 30px;
-        width: 30px;
-        margin-inline-end: 1em;
-        border-radius: 50%;
-    }
 
         .actions {
             justify-self: end;
