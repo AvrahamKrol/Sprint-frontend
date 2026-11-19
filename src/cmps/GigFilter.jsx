@@ -35,6 +35,9 @@ export function GigFilter({ filterBy, setFilterBy }) {
 
   return (
     <section className="gig-filter">
+
+      <div hidden>
+
       <h3>Filter:</h3>
       <input
         type="text"
@@ -56,6 +59,9 @@ export function GigFilter({ filterBy, setFilterBy }) {
       <button className="btn-clear" onClick={clearFilter}>
         Clear
       </button>
+      </div>
+      
+      {/* <div>
       <h3>Sort:</h3>
       <div className="sort-field">
         <label>
@@ -78,7 +84,7 @@ export function GigFilter({ filterBy, setFilterBy }) {
             onChange={handleChange}
           />
         </label>
-      </div>
+
       <div className="sort-dir">
         <label>
           <span>Asce</span>
@@ -101,9 +107,13 @@ export function GigFilter({ filterBy, setFilterBy }) {
           />
         </label>
       </div>
+
       <button className="btn-clear" onClick={clearSort}>
         Clear
       </button>
+
+     </div> 
+     </div> */}
     </section>
   )
 }
