@@ -17,7 +17,7 @@ export function GigPreview({ gig }) {
         </div>
       )}
 
-      <Link to={`/gig/${gig._id}`}><p href="" className='gig-link'>{gig.title}</p></Link>
+      <Link to={`/gig/${gig._id}`}><p href="" className='gig-link'>{gig.title}{gig.description}</p></Link>
       
       <div className='rate-div'>
         <img className='rate-star' src="/icons/star.png" alt="" />

@@ -1,0 +1,41 @@
+.categories{
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    justify-items: center;
+    
+    color: #62646a;
+    border-top: 1px solid ;
+    border-bottom: 1px solid;
+
+    >button{
+        margin: 0;
+
+        font-size: 1em;
+        color: #62646a;
+        background-color: #fff;
+        border: none;
+    }
+
+    >button:hover{
+        border-bottom: 3px solid #1dbf73;
+    }
+}
+
+.tags {
+    display: flex;
+    gap: 4em;
+    
+    margin: 0;
+    padding: 2em;
+    
+    color: #62646a;
+    border: 1px solid;
+    border-top:none ;
+
+    >li:hover{
+        color:#93959e;
+    }
+}
+
+
+    

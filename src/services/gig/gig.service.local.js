@@ -9,13 +9,7 @@ const STORAGE_KEY = 'gig'
 export const sortGigTags = {
   designAndCreative: ['Arts And Crafts', 'Logo Design', 'Web Design'],
   webDevelopment: ['WordPress', 'Web Development'],
-  videoAndAudio: [
-    'Video Editing',
-    'Voiceover',
-    'Audio',
-    'Music',
-    'Composition',
-  ],
+  videoAndAudio: ['Video Editing', 'Voiceover', 'Audio', 'Music', 'Composition'],
   writingAndTranslation: ['Writing', 'Translation', 'French'],
   digitalMarketing: ['Social Media', 'SEO'],
 }
@@ -37,6 +31,14 @@ export const GigTags = [
   'Social Media',
   'SEO',
 ]
+
+export const sortGigTags = {
+  designAndCreative: ['Arts And Crafts', 'Logo Design', 'Web Design'],
+  webDevelopment: ['WordPress', 'Web Development'],
+  videoAndAudio: ['Video Editing', 'Voiceover', 'Audio', 'Music', 'Composition'],
+  writingAndTranslation: ['Writing', 'Translation', 'French'],
+  digitalMarketing: ['Social Media', 'SEO'],
+}
 
 export const gigService = {
   query,
