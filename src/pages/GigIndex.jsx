@@ -61,12 +61,22 @@ export function GigIndex() {
 
   return (
     <section className="gig-index">
+
       <header>
         <h2>Gigs</h2>
         {userService.getLoggedinUser() && (
           <button onClick={onAddGig}>Add a Gig</button>
         )}
       </header>
+
+      <div className='categories'>
+      <button>Design And Creative</button>
+      <button>Web Development</button>
+      <button>Video And Audio</button>
+      <button>Writing And Translation</button>
+      <button>Digital Marketing</button>
+    </div>
+
       <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} />
       <GigList
         gigs={gigs}

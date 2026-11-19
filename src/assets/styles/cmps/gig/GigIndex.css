@@ -16,3 +16,22 @@
         margin-inline-end: 0;
     }
 }
+
+.categories{
+    display: grid;
+    grid-template-columns:repeat(5,1fr);
+    justify-items: center;
+    
+    color: #62646a;
+    border-top: 1px solid ;
+    border-bottom: 1px solid;
+
+    >button{
+        margin: 0;
+
+        font-size: 1em;
+        color: #62646a;
+        background-color: #fff;
+        border: none;
+    }
+}
