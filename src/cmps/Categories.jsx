@@ -1,16 +1,27 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
+
+import { sortGigTags } from "../services/gig/gig.service.local"
 
 export function Categories(){
     
-    const [ tags,setTags ] = useState()
+    const [ tags,setTags ] = useState(null)
+    
+    console.log('tags',tags)
+
+    function laodTags(category){
+       setTags(sortGigTags[category])
+    }
 
     return <section>
     <div className='categories'>
-        <button>Design And Creative</button>
-        <button>Web Development</button>
-        <button>Video And Audio</button>
-        <button>Writing And Translation</button>
-        <button>Digital Marketing</button>
+        <button onClick={()=>laodTags('designAndCreative')}>Design And Creative</button>
+        <button onClick={()=>laodTags('webDevelopment')}>Web Development</button>
+        <button onClick={()=>laodTags('videoAndAudio')}>Video And Audio</button>
+        <button onClick={()=>laodTags('writingAndTranslation')}>Writing And Translation</button>
+        <button onClick={()=>laodTags('digitalMarketing')}>Digital Marketing</button>
     </div>
+    {tags && <ul className="tags" onClick={()=>setTags(null)}>
+    {tags.map(tag =><li key={tag}>{tag}</li>)}
+    </ul> } 
     </section>
 }
