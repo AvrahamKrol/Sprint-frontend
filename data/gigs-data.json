@@ -50,7 +50,7 @@
         "imgUrls": [
           "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022951/ef02f7ab4038b804f0b8ece8bc83275725d9e338.webp"
         ],
-        "tags": ["Web Design", "UI/UX"],
+        "tags": ["Web Design"],
         "likedByUsers": [],
         "reviews": []
       },
@@ -116,7 +116,7 @@
         "imgUrls": [
           "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/c4ee9ea05d4c1f6328eb4c7fea482faf448c7843.webp"
         ],
-        "tags": ["Illustration", "Character Design"],
+        "tags": ["Arts And Crafts"],
         "likedByUsers": ["mini-user"],
         "reviews": []
       },
@@ -182,7 +182,7 @@
         "imgUrls": [
           "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022949/64844d2877638a65f7215ad967fa87cb351b037d.webp"
         ],
-        "tags": ["Social Media", "Graphic Design"],
+        "tags": ["Social Media", "Logo Design"],
         "likedByUsers": [],
         "reviews": []
       },

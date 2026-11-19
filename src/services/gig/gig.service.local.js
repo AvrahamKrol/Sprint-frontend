@@ -6,6 +6,32 @@ import { userService } from '../user'
 
 const STORAGE_KEY = 'gig'
 
+export const sortGigTags = {
+  designAndCreative: ['Arts And Crafts', 'Logo Design', 'Web Design'],
+  webDevelopment: ['WordPress', 'Web Development'],
+  videoAndAudio: ['Video Editing', 'Voiceover', 'Audio', 'Music', 'Composition'],
+  writingAndTranslation: ['Writing', 'Translation', 'French'],
+  digitalMarketing: ['Social Media', 'SEO'],
+}
+
+export const GigTags = [
+  'Arts And Crafts',
+  'Logo Design',
+  'Web Design',
+  'WordPress',
+  'Web Development',
+  'Video Editing',
+  'Voiceover',
+  'Audio',
+  'Music',
+  'Composition',
+  'Writing',
+  'Translation',
+  'French',
+  'Social Media',
+  'SEO',
+]
+
 export const gigService = {
   query,
   getById,
@@ -200,6 +226,7 @@ async function query(filterBy = { txt: '', minPrice: 0 }) {
   if (minPrice) {
     gigs = gigs.filter((gig) => gig.price >= minPrice)
   }
+
   //   if (sortField === 'vendor') {
   //     gigs.sort(
   //       (gig1, gig2) => gig1[sortField].localeCompare(gig2[sortField]) * +sortDir,
