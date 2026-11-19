@@ -1,3 +1,5 @@
+import data from '../../../data/gigs-data.json' 
+
 import { storageService } from '../async-storage.service'
 import { makeId, saveToStorage } from '../util.service'
 import { userService } from '../user'
@@ -187,7 +189,8 @@ const gigsData = [
 ]
 
 async function query(filterBy = { txt: '', minPrice: 0 }) {
-  var gigs = await storageService.query(STORAGE_KEY)
+
+  var gigs = await data
   const { txt, minPrice } = filterBy
 
   if (txt) {

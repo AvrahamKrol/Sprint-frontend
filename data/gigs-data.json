@@ -1,0 +1,233 @@
+[
+  {
+    "_id": "g101",
+    "title": "I will design your logo",
+    "price": 12.16,
+    "owner": {
+      "_id": "u101",
+      "fullname": "Dudu Da",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "basic/premium",
+      "rate": 4
+    },
+    "daysToMake": 3,
+    "description": "Make unique logo...",
+    "avgResponseTime": 1,
+    "loc": "Ghana",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993684/54cffd5e371a90afc005d388f51f164ab63a4965.webp"
+    ],
+    "tags": ["Arts And Crafts", "Logo Design"],
+    "likedByUsers": ["mini-user"],
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Did an amazing work",
+        "rate": 4,
+        "by": {
+          "_id": "u102",
+          "fullname": "user2",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ]
+  },
+      {
+        "_id": "g102",
+        "title": "I will create a modern website design",
+        "price": 35,
+        "owner": {
+          "_id": "u102",
+          "fullname": "Maya Smith",
+          "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+          "level": "top rated",
+          "rate": 5
+        },
+        "daysToMake": 5,
+        "description": "Responsive, modern website design tailored to your business.",
+        "avgResponseTime": 2,
+        "loc": "United States",
+        "imgUrls": [
+          "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022951/ef02f7ab4038b804f0b8ece8bc83275725d9e338.webp"
+        ],
+        "tags": ["Web Design", "UI/UX"],
+        "likedByUsers": [],
+        "reviews": []
+      },
+      {
+        "_id": "g103",
+        "title": "I will edit your videos professionally",
+        "price": 25,
+        "owner": {
+          "_id": "u103",
+          "fullname": "Liam Jones",
+          "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+          "level": "level 2",
+          "rate": 4.8
+        },
+        "daysToMake": 2,
+        "description": "Clean and engaging video editing for social media or business.",
+        "avgResponseTime": 1,
+        "loc": "United Kingdom",
+        "imgUrls": [
+          "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/c9b366a2d6add8945098febe1e9ab2de997bc3d7.jpg"
+        ],
+        "tags": ["Video Editing", "Social Media"],
+        "likedByUsers": ["mini-user"],
+        "reviews": []
+      },
+      {
+        "_id": "g104",
+        "title": "I will write SEO-friendly articles",
+        "price": 18,
+        "owner": {
+          "_id": "u104",
+          "fullname": "Ava Patel",
+          "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+          "level": "level 1",
+          "rate": 4.7
+        },
+        "daysToMake": 3,
+        "description": "Well-researched, original articles optimized for search.",
+        "avgResponseTime": 3,
+        "loc": "India",
+        "imgUrls": [
+          "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/a6cd67702f6f025c89861951c88fc9667e1ff623.webp"
+        ],
+        "tags": ["Writing", "SEO"],
+        "likedByUsers": [],
+        "reviews": []
+      },
+      {
+        "_id": "g105",
+        "title": "I will illustrate a custom character",
+        "price": 42,
+        "owner": {
+          "_id": "u105",
+          "fullname": "Noah Kim",
+          "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+          "level": "top rated",
+          "rate": 5
+        },
+        "daysToMake": 6,
+        "description": "A detailed custom character illustration in your preferred style.",
+        "avgResponseTime": 2,
+        "loc": "South Korea",
+        "imgUrls": [
+          "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/c4ee9ea05d4c1f6328eb4c7fea482faf448c7843.webp"
+        ],
+        "tags": ["Illustration", "Character Design"],
+        "likedByUsers": ["mini-user"],
+        "reviews": []
+      },
+      {
+        "_id": "g106",
+        "title": "I will record a professional voiceover",
+        "price": 30,
+        "owner": {
+          "_id": "u106",
+          "fullname": "Sofia Garcia",
+          "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+          "level": "level 2",
+          "rate": 4.9
+        },
+        "daysToMake": 2,
+        "description": "Warm, clear voiceover for your video, ad, or presentation.",
+        "avgResponseTime": 1,
+        "loc": "Spain",
+        "imgUrls": [
+          "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022949/255281b78dc2dfbd80064ff23f9b459869a77dae.jpg"
+        ],
+        "tags": ["Voiceover", "Audio"],
+        "likedByUsers": [],
+        "reviews": []
+      },
+      {
+        "_id": "g107",
+        "title": "I will build a custom WordPress website",
+        "price": 55,
+        "owner": {
+          "_id": "u107",
+          "fullname": "Ethan Brown",
+          "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+          "level": "top rated",
+          "rate": 4.9
+        },
+        "daysToMake": 7,
+        "description": "A polished WordPress website built around your brand and goals.",
+        "avgResponseTime": 2,
+        "loc": "Canada",
+        "imgUrls": [
+          "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022949/23e862369df8a2e891513eedff1ae1d3c10001c9.webp"
+        ],
+        "tags": ["WordPress", "Web Development"],
+        "likedByUsers": ["mini-user"],
+        "reviews": []
+      },
+      {
+        "_id": "g108",
+        "title": "I will create social media graphics",
+        "price": 16,
+        "owner": {
+          "_id": "u108",
+          "fullname": "Isabella Chen",
+          "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+          "level": "level 1",
+          "rate": 4.6
+        },
+        "daysToMake": 2,
+        "description": "Eye-catching branded graphics for your social media channels.",
+        "avgResponseTime": 1,
+        "loc": "Singapore",
+        "imgUrls": [
+          "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022949/64844d2877638a65f7215ad967fa87cb351b037d.webp"
+        ],
+        "tags": ["Social Media", "Graphic Design"],
+        "likedByUsers": [],
+        "reviews": []
+      },
+      {
+        "_id": "g109",
+        "title": "I will translate English to French",
+        "price": 20,
+        "owner": {
+          "_id": "u109",
+          "fullname": "Lucas Martin",
+          "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+          "level": "level 2",
+          "rate": 4.8
+        },
+        "daysToMake": 3,
+        "description": "Natural, accurate English-to-French translation with proofreading.",
+        "avgResponseTime": 2,
+        "loc": "France",
+        "imgUrls": [
+          "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/73efc96a2e18506a9413ea76d3418d6acc432015.webp"
+        ],
+        "tags": ["Translation", "French"],
+        "likedByUsers": ["mini-user"],
+        "reviews": []
+      },
+      {
+        "_id": "g110",
+        "title": "I will compose original background music",
+        "price": 48,
+        "owner": {
+          "_id": "u110",
+          "fullname": "Olivia Wilson",
+          "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+          "level": "top rated",
+          "rate": 5
+        },
+        "daysToMake": 5,
+        "description": "Original background music composed for your project.",
+        "avgResponseTime": 3,
+        "loc": "Australia",
+        "imgUrls": [
+          "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/7ccd4f3719f3f216b45b8d1d72250f6c68d7de0c.webp"
+        ],
+        "tags": ["Music", "Composition"],
+        "likedByUsers": [],
+        "reviews": []
+      }
+]

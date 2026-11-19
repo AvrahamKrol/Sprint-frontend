@@ -19,6 +19,8 @@ export function makeLorem(size = 100) {
     return txt
 }
 
+
+
 export function getRandomIntInclusive(min, max) {
     min = Math.ceil(min)
     max = Math.floor(max)

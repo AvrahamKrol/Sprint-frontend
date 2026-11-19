@@ -21,7 +21,7 @@ export function GigPreview({ gig }) {
       
       <div className='rate-div'>
         <img className='rate-star' src="/icons/star.png" alt="" />
-        <p>{gig.rate}</p>
+        <p>{gig.owner.rate}</p>
       </div>
 
       <p>from: {gig.price}$</p>
