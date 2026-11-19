@@ -1,5 +1,3 @@
-import { gigService } from "../../services/gig/gig.service.local"
-
 
 export const SET_GIGS = 'SET_GIGS'
 export const SET_GIG = 'SET_GIG'
