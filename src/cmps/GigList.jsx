@@ -2,9 +2,9 @@
 import { userService } from '../services/user'
 import { GigPreview } from './GigPreview'
 
-export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedGigs }) {
+export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedGigs, filterBy }) {
 
-   console.log('F-popular',popularGigs)
+   //console.log('F-popular',popularGigs)
   
    function shouldShowActionBtns(gig) {
     const user = userService.getLoggedinUser()
@@ -17,6 +17,7 @@ export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedG
 
   return (
     <section>
+      {!filterBy.tag && <div>
       <h1>Most Popoular Gigs</h1>
       
       <ul className="gig-list">
@@ -31,9 +32,9 @@ export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedG
             )}
           </li>
         ))}
-      </ul>
+      </ul> </div>}
 
-      <h1>Top Rated Gigs</h1>
+      {!filterBy.tag && <div><h1>Top Rated Gigs</h1>
 
       <ul className="gig-list">
         {topRatedGigs.map((gig) => (
@@ -47,9 +48,11 @@ export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedG
             )}
           </li>
         ))}
-      </ul>
+      </ul></div>}
 
-      {/* <ul className="gig-list">
+      {filterBy.tag  && <div>
+      <h1>{filterBy.tag}</h1> 
+      <ul className="gig-list">
         {gigs.map((gig) => (
           <li key={gig._id}>
             <GigPreview gig={gig} />
@@ -61,7 +64,7 @@ export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedG
             )}
           </li>
         ))}
-      </ul> */}
+      </ul></div>}
       
     </section>
   )

@@ -23,7 +23,7 @@ export function GigIndex() {
   const [ popularGigs,setPopularGigs ] =useState(null)
   const [ topRatedGigs,setTopRatedGigs ] =useState(null)
 
-  console.log('G',gigs)
+  //console.log('G',gigs)
 
 
   useEffect(() => {
@@ -95,6 +95,7 @@ export function GigIndex() {
       <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} />
       <GigList
         gigs={gigs}
+        filterBy={filterBy}
         onRemoveGig={onRemoveGig}
         onUpdateGig={onUpdateGig}
         popularGigs={popularGigs}
