@@ -20,15 +20,21 @@ import { Categories } from '../cmps/Categories'
 export function GigIndex() {
   const [filterBy, setFilterBy] = useState(gigService.getDefaultFilter())
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
-  const [ popularGigs,setPopularGigs ] =useState([])
-  const [ topRatedGigs,setTopRatedGigs ] =useState([])
+  const [ popularGigs,setPopularGigs ] =useState(null)
+  const [ topRatedGigs,setTopRatedGigs ] =useState(null)
+
+  console.log('G',gigs)
+
 
   useEffect(() => {
     loadGigs(filterBy)
-    if(!gigs) return
+    
+  }, [filterBy])
+
+  useEffect(()=>{
     loadMostPopular()
     loadTopRated()
-  }, [filterBy])
+  },[gigs])
 
   async function onRemoveGig(gigId) {
     try {
@@ -64,24 +70,23 @@ export function GigIndex() {
   }
 
   function loadMostPopular(){
-    if(!gigs) return
+    if(gigs.length===0) return
      const popularGigs = gigs.filter(gig=>gig.likedByUsers.length===1)
      setPopularGigs(popularGigs)
   }
 
   function loadTopRated(){
-    if(!gigs) return
+    if(gigs.length===0) return
      const topRatedGigs = gigs.filter(gig=>gig.owner.level==='top rated')
      //console.log('topRatedGigs',topRatedGigs)
      setTopRatedGigs(topRatedGigs)
   }
 
- if(!gigs && popularGigs && topRatedGigs) return <p>Loading...</p>
+ if(gigs.length===0 || !popularGigs || !topRatedGigs) return <p>Loading...</p>
   return (
     <section className="gig-index">
 
       <header>
-        <h2>Gigs</h2>
         {userService.getLoggedinUser() && (
           <button onClick={onAddGig}>Add a Gig</button>
         )}

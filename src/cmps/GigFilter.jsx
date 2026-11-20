@@ -36,7 +36,7 @@ export function GigFilter({ filterBy, setFilterBy }) {
   return (
     <section className="gig-filter">
 
-      <div hidden>
+      <div>
 
       <h3>Filter:</h3>
       <input

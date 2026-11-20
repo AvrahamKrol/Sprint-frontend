@@ -7,7 +7,7 @@ export const UPDATE_GIG = 'UPDATE_GIG'
 export const ADD_GIG_MSG = 'ADD_GIG_MSG'
 
 const initialState = {
-  gigs: [],
+  gigs:[],
   gig: null,
 }
 

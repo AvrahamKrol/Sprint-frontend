@@ -5,7 +5,7 @@
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2em;
 
-    margin-bottom: 100px;
+    margin-bottom: 70px;
     
     
     & li {
