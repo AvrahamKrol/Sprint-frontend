@@ -21,10 +21,13 @@ export function GigIndex() {
   const [filterBy, setFilterBy] = useState(gigService.getDefaultFilter())
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
 
-  console.log('filterBy',filterBy)
+  //console.log('filterBy',filterBy)
 
   useEffect(() => {
     loadGigs(filterBy)
+    if(!gigs) return
+    loadMostPopular()
+    loadTopRated()
   }, [filterBy])
 
   async function onRemoveGig(gigId) {
@@ -59,6 +62,21 @@ export function GigIndex() {
       showErrorMsg('Cannot update gig')
     }
   }
+
+  function loadMostPopular(){
+    if(!gigs) return
+     const popularGigs = gigs.filter(gig=>gig.likedByUsers.length===1)
+     //console.log('popular',popularGigs)
+     return popularGigs
+  }
+
+  function loadTopRated(){
+    if(!gigs) return
+     const topRatedGigs = gigs.filter(gig=>gig.owner.level==='top rated')
+     //console.log('topRatedGigs',topRatedGigs)
+     return topRatedGigs
+  }
+
 
   return (
     <section className="gig-index">

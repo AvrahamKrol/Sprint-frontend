@@ -28,6 +28,8 @@ export function GigList({ gigs, onRemoveGig, onUpdateGig }) {
           </li>
         ))}
       </ul>
+      <h2>Most Popoular Gigs</h2>
+      <h2>Top Rated Gigs</h2>
     </section>
   )
 }

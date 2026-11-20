@@ -220,7 +220,7 @@ async function query(filterBy = { txt: '', minPrice: 0 }) {
     gigs = _createGigs(data)
   }
 
-  const { txt, minPrice } = filterBy
+  const { txt, minPrice, tag } = filterBy
 
   if (txt) {
     const regex = new RegExp(filterBy.txt, 'i')
@@ -230,6 +230,9 @@ async function query(filterBy = { txt: '', minPrice: 0 }) {
     gigs = gigs.filter((gig) => gig.price >= minPrice)
   }
 
+  if(tag){
+    gigs = gigs.filter((gig) => gig.tags.includes(tag))
+  }
   //   if (sortField === 'vendor') {
   //     gigs.sort(
   //       (gig1, gig2) => gig1[sortField].localeCompare(gig2[sortField]) * +sortDir,
@@ -245,6 +248,7 @@ async function query(filterBy = { txt: '', minPrice: 0 }) {
   //     speed,
   //     owner,
   //   }))
+  //console.log('S-gigs',gigs)
   return gigs
 }
 
