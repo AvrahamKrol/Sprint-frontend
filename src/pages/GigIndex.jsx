@@ -20,8 +20,8 @@ import { Categories } from '../cmps/Categories'
 export function GigIndex() {
   const [filterBy, setFilterBy] = useState(gigService.getDefaultFilter())
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
-
-  //console.log('filterBy',filterBy)
+  const [ popularGigs,setPopularGigs ] =useState([])
+  const [ topRatedGigs,setTopRatedGigs ] =useState([])
 
   useEffect(() => {
     loadGigs(filterBy)
@@ -66,18 +66,17 @@ export function GigIndex() {
   function loadMostPopular(){
     if(!gigs) return
      const popularGigs = gigs.filter(gig=>gig.likedByUsers.length===1)
-     //console.log('popular',popularGigs)
-     return popularGigs
+     setPopularGigs(popularGigs)
   }
 
   function loadTopRated(){
     if(!gigs) return
      const topRatedGigs = gigs.filter(gig=>gig.owner.level==='top rated')
      //console.log('topRatedGigs',topRatedGigs)
-     return topRatedGigs
+     setTopRatedGigs(topRatedGigs)
   }
 
-
+ if(!gigs && popularGigs && topRatedGigs) return <p>Loading...</p>
   return (
     <section className="gig-index">
 
@@ -93,6 +92,8 @@ export function GigIndex() {
         gigs={gigs}
         onRemoveGig={onRemoveGig}
         onUpdateGig={onUpdateGig}
+        popularGigs={popularGigs}
+        topRatedGigs={topRatedGigs}
       />
     </section>
   )
