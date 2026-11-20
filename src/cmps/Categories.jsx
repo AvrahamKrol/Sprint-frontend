@@ -2,15 +2,20 @@ import { useState, useEffect } from "react"
 
 import { sortGigTags } from "../services/gig/gig.service.local"
 
-export function Categories(){
+export function Categories({setFilterBy}){
     
     const [ tags,setTags ] = useState(null)
     
-    console.log('tags',tags)
+    //console.log('tags',tags)
 
     function laodTags(category){
        setTags(sortGigTags[category])
     }
+
+    function handelTagFilter(chosenTag){
+       setFilterBy(prev=>({...prev,tag:chosenTag}))
+    }
+
 
     return <section>
     <div className='categories'>
@@ -21,7 +26,7 @@ export function Categories(){
         <button onClick={()=>laodTags('digitalMarketing')}>Digital Marketing</button>
     </div>
     {tags && <ul className="tags" onClick={()=>setTags(null)}>
-    {tags.map(tag =><li key={tag}>{tag}</li>)}
+    {tags.map(tag =><li key={tag} onClick={()=>handelTagFilter(tag)}>{tag}</li>)}
     </ul> } 
     </section>
 }

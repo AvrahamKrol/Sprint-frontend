@@ -21,7 +21,7 @@ export function GigIndex() {
   const [filterBy, setFilterBy] = useState(gigService.getDefaultFilter())
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
 
-  //console.log('gigs',gigs)
+  console.log('filterBy',filterBy)
 
   useEffect(() => {
     loadGigs(filterBy)
@@ -69,7 +69,7 @@ export function GigIndex() {
           <button onClick={onAddGig}>Add a Gig</button>
         )}
       </header>
-      <Categories />
+      <Categories setFilterBy={setFilterBy} />
       <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} />
       <GigList
         gigs={gigs}
