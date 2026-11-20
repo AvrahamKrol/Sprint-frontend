@@ -17,7 +17,7 @@ export function Categories({setFilterBy}){
     }
 
 
-    return <section>
+    return <section className="categories-container">
     <div className='categories'>
         <button onClick={()=>laodTags('designAndCreative')}>Design And Creative</button>
         <button onClick={()=>laodTags('webDevelopment')}>Web Development</button>

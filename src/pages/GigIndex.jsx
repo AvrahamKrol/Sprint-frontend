@@ -90,6 +90,7 @@ export function GigIndex() {
         {userService.getLoggedinUser() && (
           <button onClick={onAddGig}>Add a Gig</button>
         )}
+        
       </header>
       <Categories setFilterBy={setFilterBy} />
       <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} />
