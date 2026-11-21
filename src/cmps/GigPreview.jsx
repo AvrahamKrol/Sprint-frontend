@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom'
 
+import { Carousel } from './Caruosel'
+
 export function GigPreview({ gig }) {
 
   return (
 
     <article className="gig-preview">
-      <img className='gig-img' src={gig.imgUrls[0]} alt="" />
+      
+      <Carousel gig={gig} />
       
       <div>
       {gig.owner && (
