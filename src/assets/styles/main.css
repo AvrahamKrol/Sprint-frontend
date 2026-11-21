@@ -13,15 +13,19 @@
 @import "cmps/UserDetails";
 @import "cmps/LoginSignup";
 @import "cmps/Chat";
+@import "cmps/Rating";
+@import "cmps/ImageGallery";
 
 @import "cmps/AppHeader";
 @import "cmps/AppFooter";
 @import "cmps/UserMsg";
 
 @import "cmps/gig/GigIndex";
+@import "cmps/gig/GigDetails";
 @import "cmps/gig/GigList";
 @import "cmps/gig/GigPreview";
 @import "cmps/gig/GigFilter";
+@import "cmps/gig/GigOrders";
 
 @import "cmps/review/ReviewEdit";
 @import "cmps/review/ReviewList";

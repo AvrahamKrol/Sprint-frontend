@@ -36,6 +36,8 @@
 
   --font-main: 'Helvetica Neue', sans-serif;
 
+  --container-max: 1400px;
+
   --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;

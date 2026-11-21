@@ -1,0 +1,103 @@
+.gig-details {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  /* gap: 10rem; */
+  max-width: var(--container-max);
+  /* overflow-wrap: break-word; */
+  padding-block-start: 1rem;
+
+  /* margin: 0 auto; */
+  /* padding: 0 var(--space-lg); */
+  .details-main {
+    grid-column: 1;
+    margin-inline-end: 9.15%;
+
+    .gig-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding-block-end: 1rem;
+      margin: 0;
+    }
+
+    .details-avatar {
+      border-radius: 50%;
+      width: 62px;
+    }
+
+    .seller-overview {
+      display: flex;
+      gap: 1rem;
+      font-weight: 600;
+
+      align-items: center;
+
+      .owner-info {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+        font-size: 1.125rem;
+        line-height: 1.625rem;
+        color: #404145
+      }
+
+      & p {
+        margin: 0;
+      }
+
+      .owner-rating {
+        display: flex;
+        gap: var(--space-xs);
+        align-items: baseline;
+        color: var(--clr-black);
+
+        .rating {
+          display: flex;
+          align-items: baseline;
+          gap: var(--space-xs);
+
+          & svg {
+            width: var(--space-md);
+          }
+
+          .star-filled {
+            stop-color: var(--clr-black);
+          }
+
+          .star-empty {
+            stop-color: var(--clr-white);
+          }
+        }
+
+        .rating-count {
+          color: var(--clr-black)
+        }
+
+        .reviews-count {
+          color: var(--clr-gray-dark);
+          font-weight: 200;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .loyalty {
+      padding-block-start: 1.25rem;
+      margin-block: 1rem;
+      border-top: 1px solid rgb(239, 239, 240);
+      font-size: .875em;
+      font-weight: 600;
+      line-height: 30px;
+    }
+  }
+
+  .details-sidebar {
+    grid-column: 2;
+    border: 1px solid #dbdbdb;
+    border-radius: var(--space-sm);
+    overflow: hidden;
+    position: sticky;
+    top: 100px;
+  }
+}

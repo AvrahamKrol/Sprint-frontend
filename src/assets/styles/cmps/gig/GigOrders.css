@@ -1,0 +1,46 @@
+.order-tabs {
+  display: flex;
+
+  &>button {
+    color: var(--clr-black);
+    flex: 1;
+    margin: 0;
+    padding: 16px;
+    background: #fafafa;
+    border: .5px solid #ddd;
+    border-radius: 0;
+    border-bottom: 3px solid transparent;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    &.active {
+      background: var(--clr-white);
+      border-bottom: 3px solid var(--clr-black);
+      border-bottom-color: #222325;
+    }
+  }
+}
+
+
+
+.order-content {
+  padding: 24px;
+  border: 1px solid #ddd;
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.continue-btn {
+  width: 100%;
+  padding: 14px;
+  background: #222325;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

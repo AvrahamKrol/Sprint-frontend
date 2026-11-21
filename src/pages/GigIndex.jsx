@@ -20,7 +20,7 @@ export function GigIndex() {
   const [filterBy, setFilterBy] = useState(gigService.getDefaultFilter())
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
 
-  console.log('gigs',gigs)
+  console.log('gigs', gigs)
 
   useEffect(() => {
     loadGigs(filterBy)
@@ -61,7 +61,6 @@ export function GigIndex() {
 
   return (
     <section className="gig-index">
-
       <header>
         <h2>Gigs</h2>
         {userService.getLoggedinUser() && (
@@ -69,13 +68,13 @@ export function GigIndex() {
         )}
       </header>
 
-      <div className='categories'>
-      <button>Design And Creative</button>
-      <button>Web Development</button>
-      <button>Video And Audio</button>
-      <button>Writing And Translation</button>
-      <button>Digital Marketing</button>
-    </div>
+      <div className="categories">
+        <button>Design And Creative</button>
+        <button>Web Development</button>
+        <button>Video And Audio</button>
+        <button>Writing And Translation</button>
+        <button>Digital Marketing</button>
+      </div>
 
       <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} />
       <GigList
