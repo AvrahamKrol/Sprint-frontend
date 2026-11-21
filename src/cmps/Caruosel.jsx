@@ -23,9 +23,9 @@ export function Carousel({gig}){
     }
 
     return(
-        <section className="carousel">
+        <section style={{position:"relative"}} className="carousel">
 
-            <button style={{position:'absolute'}} onClick={prevImage}>❮</button>
+            <button style={{position:'absolute', left:0}} onClick={prevImage}>❮</button>
 
             
                 <div
@@ -39,7 +39,7 @@ export function Carousel({gig}){
                     ))}
                 </div>
 
-            <button style={{position:'absolute'}} onClick={nextImage}>❯</button>
+            <button style={{position:'absolute', right:0}} onClick={nextImage}>❯</button>
 
         </section>
     )
