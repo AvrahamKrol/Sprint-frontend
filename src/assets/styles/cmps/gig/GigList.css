@@ -11,10 +11,8 @@
     
     & li {
         display: grid;
-        padding: .5em;
         background-color: #fff;
-
-
+        
         .actions {
             justify-self: end;
 
