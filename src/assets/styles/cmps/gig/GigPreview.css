@@ -3,7 +3,6 @@
     
     .gig-img{
         border-radius: 10px;
-        margin-bottom: 1em;
     }   
     
     .gig-owner{
@@ -24,13 +23,16 @@
         margin: 0;
     }
 
-    & .gig-link {
+    &  .gig-link {
+    height: 53px;
+    margin-bottom: 1em;
+    
     font-size: 1.2em;
     font-weight: 400;
     line-height: 28px;
-    margin-bottom: .5em;
+    overflow: clip;
 }
-}
+
 
 .owner-name-div{
     display: flex;
@@ -38,11 +40,52 @@
 
 .rate-div{
    display: flex;
-   margin-bottom: 0.5em;
+   margin-bottom: 1em;
 }
 
 .rate-star{
    width: 24px;
    height: 24px;
    margin-inline-end: .3em;
+}
+
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%;
+    margin-bottom: 1em;
+    
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel-track img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 40px;
+    height: 40px;
+    margin: .5em;
+    
+    background: #9e9e9ee3;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 2;
 }

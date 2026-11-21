@@ -1,5 +1,3 @@
-import { gigService } from "../../services/gig/gig.service.local"
-
 
 export const SET_GIGS = 'SET_GIGS'
 export const SET_GIG = 'SET_GIG'
@@ -9,7 +7,7 @@ export const UPDATE_GIG = 'UPDATE_GIG'
 export const ADD_GIG_MSG = 'ADD_GIG_MSG'
 
 const initialState = {
-  gigs: [],
+  gigs:[],
   gig: null,
 }
 

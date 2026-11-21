@@ -15,16 +15,24 @@ import { userService } from '../services/user'
 
 import { GigList } from '../cmps/GigList'
 import { GigFilter } from '../cmps/GigFilter'
+import { Categories } from '../cmps/Categories'
 
 export function GigIndex() {
   const [filterBy, setFilterBy] = useState(gigService.getDefaultFilter())
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
+  const [popularGigs, setPopularGigs] = useState(null)
+  const [topRatedGigs, setTopRatedGigs] = useState(null)
 
-  console.log('gigs', gigs)
+  //console.log('G',gigs)
 
   useEffect(() => {
     loadGigs(filterBy)
   }, [filterBy])
+
+  useEffect(() => {
+    loadMostPopular()
+    loadTopRated()
+  }, [gigs])
 
   async function onRemoveGig(gigId) {
     try {
@@ -59,28 +67,37 @@ export function GigIndex() {
     }
   }
 
+  function loadMostPopular() {
+    if (gigs.length === 0) return
+    const popularGigs = gigs.filter((gig) => gig.likedByUsers.length === 1)
+    setPopularGigs(popularGigs)
+  }
+
+  function loadTopRated() {
+    if (gigs.length === 0) return
+    const topRatedGigs = gigs.filter((gig) => gig.owner.level === 'top rated')
+    //console.log('topRatedGigs',topRatedGigs)
+    setTopRatedGigs(topRatedGigs)
+  }
+
+  if (gigs.length === 0 || !popularGigs || !topRatedGigs)
+    return <p>Loading...</p>
   return (
     <section className="gig-index">
       <header>
-        <h2>Gigs</h2>
         {userService.getLoggedinUser() && (
           <button onClick={onAddGig}>Add a Gig</button>
         )}
       </header>
-
-      <div className="categories">
-        <button>Design And Creative</button>
-        <button>Web Development</button>
-        <button>Video And Audio</button>
-        <button>Writing And Translation</button>
-        <button>Digital Marketing</button>
-      </div>
-
+      <Categories setFilterBy={setFilterBy} />
       <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} />
       <GigList
         gigs={gigs}
+        filterBy={filterBy}
         onRemoveGig={onRemoveGig}
         onUpdateGig={onUpdateGig}
+        popularGigs={popularGigs}
+        topRatedGigs={topRatedGigs}
       />
     </section>
   )

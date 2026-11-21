@@ -1,9 +1,11 @@
 import { Link } from 'react-router-dom'
 
+import { Carousel } from './Caruosel'
+
 export function GigPreview({ gig }) {
   return (
     <article className="gig-preview">
-      <img className="gig-img" src={gig.imgUrls[0]} alt="" />
+      <Carousel gig={gig} />
 
       <div>
         {gig.owner && (
@@ -21,6 +23,7 @@ export function GigPreview({ gig }) {
         <Link to={`/gig/${gig._id}`}>
           <p href="" className="gig-link">
             {gig.title}
+            {gig.description}
           </p>
         </Link>
 
