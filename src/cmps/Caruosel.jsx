@@ -38,6 +38,7 @@ export function Carousel({gig}){
                         <img style={{maxHeight:'250px'}} key={idx} className="gig-img" src={img} alt="" />
                     ))}
                 </div>
+                
 
             <button style={{position:'absolute', right:0}} onClick={nextImage}>❯</button>
 

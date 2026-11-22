@@ -98,6 +98,7 @@ async function save(gig) {
       imgUrls: [],
       title: gig.title,
       price: gig.price,
+      tags:[],
       // Later, owner is set by the backend
       owner: userService.getLoggedinUser() || {fullName:'Bot',rate:getRandomIntInclusive(1,5)},
       likedByUsers: ['Dany'],

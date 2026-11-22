@@ -51,6 +51,17 @@ export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedG
       </ul></div>}
 
       {filterBy.tag  && <div>
+
+      <div>
+      <button className='budget'>Budget</button>
+      <div className='budget-div'>
+        <p>Value</p>
+        <p>Mid-range</p>
+        <p>Hige-end</p>
+        <p>Custom</p>
+      </div>
+      </div>
+
       <h1>{filterBy.tag}</h1> 
       <ul className="gig-list">
         {gigs.map((gig) => (
