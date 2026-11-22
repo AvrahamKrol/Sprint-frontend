@@ -18,7 +18,7 @@ function getDefaultFilter() {
   return {
     txt: '',
     minPrise: '',
-    tag:'',
+    tag:''
   }
 }
 

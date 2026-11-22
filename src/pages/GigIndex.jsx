@@ -57,8 +57,9 @@ export function GigIndex() {
   }
 
   async function onAddGig() {
-    const gig = gigService.getEmptyGig()
-    gig.vendor = prompt('Vendor?', 'Some Vendor')
+    const gig = {}
+    gig.title = prompt('Title:')
+    gig.price = prompt('price:')
     try {
       const savedGig = await addGig(gig)
       showSuccessMsg(`Gig added (id: ${savedGig._id})`)
@@ -97,11 +98,12 @@ export function GigIndex() {
   return (
     <section className="gig-index">
       <header>
-        {userService.getLoggedinUser() && (
+        {/* {userService.getLoggedinUser() && (
           <button onClick={onAddGig}>Add a Gig</button>
-        )}
+        )} */}
       </header>
       <Categories setFilterBy={setFilterBy} />
+      <button onClick={onAddGig}>Add a Gig</button>
       <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} />
       <GigList
         gigs={gigs}

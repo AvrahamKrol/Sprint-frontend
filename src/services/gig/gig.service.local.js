@@ -1,7 +1,7 @@
 import data from '../../../data/gigs-data.json'
 
 import { storageService } from '../async-storage.service'
-import { makeId, saveToStorage } from '../util.service'
+import { makeId, saveToStorage, getRandomIntInclusive } from '../util.service'
 import { userService } from '../user'
 
 const STORAGE_KEY = 'gig'
@@ -94,11 +94,13 @@ async function save(gig) {
     savedGig = await storageService.put(STORAGE_KEY, gigToSave)
   } else {
     const gigToSave = {
-      vendor: gig.vendor,
-      speed: gig.speed,
+      _id: makeId(),
+      imgUrls: [],
+      title: gig.title,
+      price: gig.price,
       // Later, owner is set by the backend
-      owner: userService.getLoggedinUser(),
-      msgs: [],
+      owner: userService.getLoggedinUser() || {fullName:'Bot',rate:getRandomIntInclusive(1,5)},
+      likedByUsers: ['Dany'],
     }
     savedGig = await storageService.post(STORAGE_KEY, gigToSave)
   }

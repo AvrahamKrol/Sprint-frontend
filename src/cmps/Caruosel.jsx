@@ -5,7 +5,7 @@ export function Carousel({gig}){
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const imgs = [
-        gig.imgUrls[0],
+        gig.imgUrls[0] || "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795333050/images.jpg",
         gig.imgUrls[1],
         gig.imgUrls[2], 
     ]
@@ -35,7 +35,7 @@ export function Carousel({gig}){
                     }}
                 >
                     {imgs.map((img, idx) => (
-                        <img key={idx} src={img} alt="" className="gig-img" />
+                        <img style={{maxHeight:'250px'}} key={idx} className="gig-img" src={img} alt="" />
                     ))}
                 </div>
 
