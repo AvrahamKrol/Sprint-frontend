@@ -53,13 +53,13 @@ export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedG
       {filterBy.tag  && <div>
 
       <div>
-      <button className='budget'>Budget</button>
-      <div className='budget-div'>
-        <p>Value</p>
-        <p>Mid-range</p>
-        <p>Hige-end</p>
-        <p>Custom</p>
-      </div>
+      <select className='budget'>
+        <option >Budget</option>
+        <option>Value</option>
+        <option>Mid-range</option>
+        <option>Hige-end</option>
+        <option>Custom</option>
+      </select>
       </div>
 
       <h1>{filterBy.tag}</h1> 
