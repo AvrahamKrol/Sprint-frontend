@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
 
+import { useSearchParams } from 'react-router-dom'
+
 import {
   loadGigs,
   addGig,
@@ -18,21 +20,32 @@ import { GigFilter } from '../cmps/GigFilter'
 import { Categories } from '../cmps/Categories'
 
 export function GigIndex() {
-  const [filterBy, setFilterBy] = useState(gigService.getDefaultFilter())
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
   const [popularGigs, setPopularGigs] = useState(null)
   const [topRatedGigs, setTopRatedGigs] = useState(null)
+  
+  const [ params,setParams ] = useSearchParams()
+  const [filterBy, setFilterBy] = useState(pullParams())
 
   //console.log('G',gigs)
 
   useEffect(() => {
     loadGigs(filterBy)
+    setParams(filterBy)
   }, [filterBy])
 
   useEffect(() => {
     loadMostPopular()
     loadTopRated()
   }, [gigs])
+
+  function pullParams(){
+    const txt = params.get('txt') || ''
+    const tag = params.get('tag') || ''
+    const minPrice = +params.get('minPrice') || 0
+
+    return { txt, tag, minPrice }
+  }
 
   async function onRemoveGig(gigId) {
     try {
@@ -80,8 +93,7 @@ export function GigIndex() {
     setTopRatedGigs(topRatedGigs)
   }
 
-  if (gigs.length === 0 || !popularGigs || !topRatedGigs)
-    return <p>Loading...</p>
+  if (!gigs || !popularGigs || !topRatedGigs) return <p>Loading...</p>
   return (
     <section className="gig-index">
       <header>
