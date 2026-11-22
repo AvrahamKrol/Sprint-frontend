@@ -5,9 +5,9 @@ export function Carousel({gig}){
     const [currentIndex, setCurrentIndex] = useState(0)
 
     const imgs = [
-        [gig.imgUrls[0]],
-        'https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp',
-        'https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp',
+        gig.imgUrls[0],
+        gig.imgUrls[1],
+        gig.imgUrls[2], 
     ]
 
     function nextImage() {
