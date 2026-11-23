@@ -84,9 +84,6 @@ export function GigIndex() {
 
   async function onAddGig() {
     const gig = {price:0 ,owner:{}}
-    gig.owner.fullname = prompt('Name:')
-    gig.price = prompt('price:')
-    gig.imgUrl = prompt('Img-url:')
     try {
       const savedGig = await addGig(gig)
       showSuccessMsg(`Gig added (id: ${savedGig._id})`)
@@ -96,15 +93,9 @@ export function GigIndex() {
   }
 
   async function onUpdateGig(gig) {
-    const price = +prompt('New price?', gig.price) || 0
-    if (price === 0 || price === gig.price) return
-    
-    const fullname = prompt('New price?', gig.owner.fullname)
-    const owner = {...gig.owner,fullname}
-    const gigToSave = { ...gig, price ,owner }
     try {
-      const savedGig = await updateGig(gigToSave)
-      showSuccessMsg(`Gig updated, new speed: ${savedGig.speed}`)
+      const savedGig = await updateGig(gig)
+      showSuccessMsg(`Gig updated`)
     } catch (err) {
       showErrorMsg('Cannot update gig')
     }
@@ -126,13 +117,8 @@ export function GigIndex() {
   if (!gigs || !popularGigs || !topRatedGigs) return <p>Loading...</p>
   return (
     <section className="gig-index">
-      <header>
-        {/* {userService.getLoggedinUser() && (
-          <button onClick={onAddGig}>Add a Gig</button>
-        )} */}
-      </header>
       <Categories setFilterBy={setFilterBy} />
-      <button onClick={onAddGig}>Add a Gig</button>
+      <button style={{marginInline:0 }} onClick={onAddGig}>Add a Gig</button>
       {/* <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} /> */}
       <GigList
         gigs={gigs}

@@ -97,15 +97,28 @@ async function remove(gigId) {
 async function save(gig) {
   var savedGig
   if (gig._id) {
-    savedGig = await storageService.put(STORAGE_KEY, gig)
+       const price = +prompt('New price?', gig.price) || 0
+        if (price === 0 || price === gig.price) return
+        
+        const fullName = prompt('New name?', gig.owner.fullName)
+        const owner = {...gig.owner,fullName}
+        const gigToSave = { ...gig, price ,owner }
+
+
+    savedGig = await storageService.put(STORAGE_KEY, gigToSave)
   } else {
+
+    gig.owner.fullName = prompt('Name:')
+    gig.price = prompt('price:')
+    gig.imgUrl = prompt('Img-url:')
+
     const gigToSave = {
       title: 'I will do your gig',
       description: 'I love this app',
       price: gig.price,
       // Later, owner is set by the backend
       owner: userService.getLoggedinUser() || {
-        fullName: gig.owner.fullname,
+        fullName: gig.owner.fullName,
         rate: getRandomIntInclusive(1, 5),
       },
       likedByUsers: ['Dany'],

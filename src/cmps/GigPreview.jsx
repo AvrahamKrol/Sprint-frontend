@@ -22,7 +22,7 @@ export function GigPreview({ gig }) {
 
         <Link to={`/gig/${gig._id}`}>
           <p href="" className="gig-link">
-            {gig.title}
+            {gig.title + ' '} 
             {gig.description}
           </p>
         </Link>
