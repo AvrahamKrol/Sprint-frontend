@@ -48,7 +48,7 @@ export const gigService = {
 window.cs = gigService
 
 async function query(filterBy = { txt: '', minPrice: 0 }) {
-  var gigs = null //await storageService.query(STORAGE_KEY)
+  var gigs = await storageService.query(STORAGE_KEY)
   if (!gigs || !gigs.length) {
     gigs = _createGigs(data)
   }
@@ -56,9 +56,15 @@ async function query(filterBy = { txt: '', minPrice: 0 }) {
   const { txt, minPrice, tag } = filterBy
 
   if (txt) {
-    const regex = new RegExp(filterBy.txt, 'i')
-    gigs = gigs.filter((gig) => regex.test(gig.description))
+    const term = txt.trim().toLowerCase()
+    gigs = gigs.filter(
+      (gig) =>
+        gig.owner?.fullName?.toLowerCase().includes(term) ||
+        gig.description?.toLowerCase().includes(term) ||
+        gig.tags?.some((t) => t.toLowerCase().includes(term)),
+    )
   }
+
   if (minPrice) {
     gigs = gigs.filter((gig) => gig.price >= minPrice)
   }

@@ -64,7 +64,7 @@ export function GigDetails() {
             alt="avatar image"
           />
           <div className="owner-info">
-            <p>{gig?.owner?.fullname}</p>
+            <p>{gig?.owner?.fullName}</p>
             <div className="owner-rating">
               <Rating rating={gig?.owner?.rate} />
               <span className="rating-count">{gig?.owner?.rate}</span>

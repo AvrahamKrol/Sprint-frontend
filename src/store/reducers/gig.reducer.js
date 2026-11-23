@@ -97,7 +97,7 @@ function unitTestReducer() {
   const msg = {
     id: 'm' + parseInt('' + Math.random() * 100),
     txt: 'Some msg',
-    by: { _id: 'u123', fullname: 'test' },
+    by: { _id: 'u123', fullName: 'test' },
   }
   state = gigReducer(state, { type: ADD_GIG_MSG, gigId: gig1._id, msg })
   console.log('After ADD_GIG_MSG:', state)

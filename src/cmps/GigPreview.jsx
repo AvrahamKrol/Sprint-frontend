@@ -16,7 +16,7 @@ export function GigPreview({ gig }) {
               alt=""
             />
 
-            <p className="gig-owner">{gig.owner.fullname} </p>
+            <p className="gig-owner">{gig.owner.fullName} </p>
           </div>
         )}
 
