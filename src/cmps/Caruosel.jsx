@@ -33,7 +33,9 @@ export function Carousel({gig}){
                     style={{
                         transform: `translateX(-${currentIndex * 100}%)`
                     }}
-                >
+                >   
+                <img className="like" 
+                src="https://res.cloudinary.com/z6rg2bwn/image/upload/v1795360044/Heart--Streamline-Sharp-Remix.png" />
                     {imgs.map((img, idx) => (
                         <img style={{maxHeight:'250px'}} key={idx} className="gig-img" src={img} alt="" />
                     ))}
