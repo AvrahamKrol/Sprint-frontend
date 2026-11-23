@@ -57,9 +57,10 @@ export function GigIndex() {
   }
 
   async function onAddGig() {
-    const gig = {}
-    gig.title = prompt('Title:')
+    const gig = {price:0 ,owner:{}}
+    gig.owner.fullname = prompt('Name:')
     gig.price = prompt('price:')
+    gig.imgUrl = prompt('Img-url:')
     try {
       const savedGig = await addGig(gig)
       showSuccessMsg(`Gig added (id: ${savedGig._id})`)
@@ -69,10 +70,12 @@ export function GigIndex() {
   }
 
   async function onUpdateGig(gig) {
-    const speed = +prompt('New speed?', gig.speed) || 0
-    if (speed === 0 || speed === gig.speed) return
-
-    const gigToSave = { ...gig, speed }
+    const price = +prompt('New price?', gig.price) || 0
+    if (price === 0 || price === gig.price) return
+    
+    const fullname = prompt('New price?', gig.owner.fullname)
+    const owner = {...gig.owner,fullname}
+    const gigToSave = { ...gig, price ,owner }
     try {
       const savedGig = await updateGig(gigToSave)
       showSuccessMsg(`Gig updated, new speed: ${savedGig.speed}`)

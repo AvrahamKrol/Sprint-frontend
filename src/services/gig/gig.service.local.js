@@ -42,7 +42,7 @@ export const gigService = {
 window.cs = gigService
 
 async function query(filterBy = { txt: '', minPrice: 0 }) {
-   var gigs = null//await storageService.query(STORAGE_KEY)
+   var gigs = await storageService.query(STORAGE_KEY) || data
   if (!gigs || !gigs.length) {
     gigs = _createGigs(data)
   }
@@ -87,25 +87,28 @@ async function remove(gigId) {
 async function save(gig) {
   var savedGig
   if (gig._id) {
-    const gigToSave = {
-      _id: gig._id,
-      speed: gig.speed,
-    }
-    savedGig = await storageService.put(STORAGE_KEY, gigToSave)
+    savedGig = await storageService.put(STORAGE_KEY, gig)
   } else {
     const gigToSave = {
-      _id: makeId(),
-      imgUrls: [],
-      title: gig.title,
+      title: 'I will do your gig',
+      description: 'I love this app',
       price: gig.price,
-      tags:[],
       // Later, owner is set by the backend
-      owner: userService.getLoggedinUser() || {fullName:'Bot',rate:getRandomIntInclusive(1,5)},
+      owner: {fullname:gig.owner.fullname,rate:getRandomIntInclusive(1,5)},
       likedByUsers: ['Dany'],
+      level: 'top rated',
+      imgUrls:[
+        gig.imgUrl || "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795425035/36f2c80749eb69bc80aca7bb9c76b41f8dc589cc.webp",
+        "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+        "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+      ],
+      tags:[],
     }
-    savedGig = await storageService.post(STORAGE_KEY, gigToSave)
+
+    savedGig= await storageService.post(STORAGE_KEY, gigToSave)
   }
   return savedGig
+
 }
 
 async function addGigMsg(gigId, txt) {
