@@ -9,7 +9,13 @@ const STORAGE_KEY = 'gig'
 export const sortGigTags = {
   designAndCreative: ['Arts And Crafts', 'Logo Design', 'Web Design'],
   webDevelopment: ['WordPress', 'Web Development'],
-  videoAndAudio: ['Video Editing', 'Voiceover', 'Audio', 'Music', 'Composition'],
+  videoAndAudio: [
+    'Video Editing',
+    'Voiceover',
+    'Audio',
+    'Music',
+    'Composition',
+  ],
   writingAndTranslation: ['Writing', 'Translation', 'French'],
   digitalMarketing: ['Social Media', 'SEO'],
 }
@@ -42,7 +48,7 @@ export const gigService = {
 window.cs = gigService
 
 async function query(filterBy = { txt: '', minPrice: 0 }) {
-   var gigs = await storageService.query(STORAGE_KEY) || data
+  var gigs = await storageService.query(STORAGE_KEY)
   if (!gigs || !gigs.length) {
     gigs = _createGigs(data)
   }
@@ -50,21 +56,25 @@ async function query(filterBy = { txt: '', minPrice: 0 }) {
   const { txt, minPrice, tag } = filterBy
 
   if (txt) {
-    const regex = new RegExp(filterBy.txt, 'i')
-    gigs = gigs.filter((gig) => regex.test(gig.description))
+    const term = txt.trim().toLowerCase()
+    gigs = gigs.filter(
+      (gig) =>
+        gig.owner?.fullName?.toLowerCase().includes(term) ||
+        gig.description?.toLowerCase().includes(term) ||
+        gig.tags?.some((t) => t.toLowerCase().includes(term)),
+    )
   }
+
   if (minPrice) {
     gigs = gigs.filter((gig) => gig.price >= minPrice)
   }
 
-  if(tag){
+  if (tag) {
     gigs = gigs.filter((gig) => gig.tags.includes(tag))
   }
-  
-    gigs.sort(
-        (gig1, gig2) => gig2.owner.rate-gig1.owner.rate
-    )
-  
+
+  gigs.sort((gig1, gig2) => gig2.owner.rate - gig1.owner.rate)
+
   //   gigs = gigs.map(({ _id, vendor, speed, owner }) => ({
   //     _id,
   //     vendor,
@@ -94,7 +104,10 @@ async function save(gig) {
       description: 'I love this app',
       price: gig.price,
       // Later, owner is set by the backend
-      owner: {fullname:gig.owner.fullname,rate:getRandomIntInclusive(1,5)},
+      owner: userService.getLoggedinUser() || {
+        fullName: gig.owner.fullname,
+        rate: getRandomIntInclusive(1, 5),
+      },
       likedByUsers: ['Dany'],
       level: 'top rated',
       imgUrls:[

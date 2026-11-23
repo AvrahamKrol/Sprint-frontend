@@ -25,14 +25,15 @@
 
   --clr-gray: #c5c6c9;
   --clr-gray-hov: #f5f5f5;
+  --clr-gray-light: #fdfdfd;
   --clr-gray-dark: #62646a;
   --clr-gray-darkest: #404145;
 
   --clr-star: #FFBE5B;
 
-  --success: #DFF5E9;
-  --warning: #FFF1D6;
-  --error: #FCE4E4;
+  --success: #1dda33;
+  --warning: #f9c255;
+  --error: #fd9d9d;
 
   --font-main: 'Helvetica Neue', sans-serif;
 

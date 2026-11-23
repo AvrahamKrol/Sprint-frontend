@@ -5,6 +5,7 @@ import {
   REMOVE_GIG,
   SET_GIGS,
   SET_GIG,
+  SET_FILTER_BY,
   UPDATE_GIG,
   ADD_GIG_MSG,
 } from '../reducers/gig.reducer'
@@ -61,6 +62,15 @@ export async function updateGig(gig) {
   }
 }
 
+export function setFilterBy(filterBy) {
+  try {
+    store.dispatch(getCmdSetFilterBy(filterBy))
+  } catch (err) {
+    console.log('Cannot set filter by', err)
+    throw err
+  }
+}
+
 export async function addGigMsg(gigId, txt) {
   try {
     const msg = await gigService.addGigMsg(gigId, txt)
@@ -83,6 +93,12 @@ function getCmdSetGig(gig) {
   return {
     type: SET_GIG,
     gig,
+  }
+}
+function getCmdSetFilterBy(filterBy) {
+  return {
+    type: SET_FILTER_BY,
+    filterBy,
   }
 }
 function getCmdRemoveGig(gigId) {

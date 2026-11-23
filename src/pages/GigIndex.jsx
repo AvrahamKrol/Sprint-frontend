@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-
 import { useSearchParams } from 'react-router-dom'
 
 import {
   loadGigs,
   addGig,
+  setFilterBy,
   updateGig,
   removeGig,
   // addGigMsg,
@@ -21,30 +21,56 @@ import { Categories } from '../cmps/Categories'
 
 export function GigIndex() {
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
-  const [popularGigs, setPopularGigs] = useState(null)
-  const [topRatedGigs, setTopRatedGigs] = useState(null)
-  
-  const [ params,setParams ] = useSearchParams()
-  const [filterBy, setFilterBy] = useState(pullParams())
+  const filterBy = useSelector((storeState) => storeState.gigModule.filterBy)
+  // const [popularGigs, setPopularGigs] = useState(null)
+  // const [topRatedGigs, setTopRatedGigs] = useState(null)
+
+  console.log(filterBy)
+  console.log(gigs)
+
+  const popularGigs = gigs.filter((gig) => gig.likedByUsers?.length === 1)
+  const topRatedGigs = gigs.filter((gig) => gig.owner?.level === 'top rated')
+
+  const [params, setParams] = useSearchParams()
+  // const [filterBy, setFilterBy] = useState(pullParams())
 
   //console.log('G',gigs)
 
   useEffect(() => {
-    loadGigs(filterBy)
-    setParams(filterBy)
-  }, [filterBy])
+    const { txt, tag, minPrice } = pullParams()
+    if (txt || tag || minPrice) {
+      setFilterBy({ txt, tag, minPrice })
+    }
+  }, [])
 
   useEffect(() => {
-    loadMostPopular()
-    loadTopRated()
-  }, [gigs])
+    loadGigs(filterBy)
 
-  function pullParams(){
+    const updateParams = cleanParams(filterBy)
+
+    setParams(updateParams)
+  }, [filterBy])
+
+  // useEffect(() => {
+  //   loadMostPopular()
+  //   loadTopRated()
+  // }, [gigs])
+
+  function pullParams() {
     const txt = params.get('txt') || ''
     const tag = params.get('tag') || ''
     const minPrice = +params.get('minPrice') || 0
 
     return { txt, tag, minPrice }
+  }
+
+  function cleanParams(filterBy) {
+    const newParams = {}
+    if (filterBy.txt) newParams.txt = filterBy.txt
+    if (filterBy.tag) newParams.tag = filterBy.tag
+    if (filterBy.minPrice) newParams.minPrice = filterBy.minPrice
+
+    return newParams
   }
 
   async function onRemoveGig(gigId) {
@@ -84,18 +110,18 @@ export function GigIndex() {
     }
   }
 
-  function loadMostPopular() {
-    if (gigs.length === 0) return
-    const popularGigs = gigs.filter((gig) => gig.likedByUsers.length === 1)
-    setPopularGigs(popularGigs)
-  }
+  // function loadMostPopular() {
+  //   if (gigs.length === 0) return
+  //   const popularGigs = gigs.filter((gig) => gig.likedByUsers.length === 1)
+  //   setPopularGigs(popularGigs)
+  // }
 
-  function loadTopRated() {
-    if (gigs.length === 0) return
-    const topRatedGigs = gigs.filter((gig) => gig.owner.level === 'top rated')
-    //console.log('topRatedGigs',topRatedGigs)
-    setTopRatedGigs(topRatedGigs)
-  }
+  // function loadTopRated() {
+  //   if (gigs.length === 0) return
+  //   const topRatedGigs = gigs.filter((gig) => gig.owner.level === 'top rated')
+  //   //console.log('topRatedGigs',topRatedGigs)
+  //   setTopRatedGigs(topRatedGigs)
+  // }
 
   if (!gigs || !popularGigs || !topRatedGigs) return <p>Loading...</p>
   return (
@@ -107,7 +133,7 @@ export function GigIndex() {
       </header>
       <Categories setFilterBy={setFilterBy} />
       <button onClick={onAddGig}>Add a Gig</button>
-      <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} />
+      {/* <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} /> */}
       <GigList
         gigs={gigs}
         filterBy={filterBy}

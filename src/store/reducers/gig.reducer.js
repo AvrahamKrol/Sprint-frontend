@@ -1,14 +1,17 @@
-
 export const SET_GIGS = 'SET_GIGS'
 export const SET_GIG = 'SET_GIG'
 export const REMOVE_GIG = 'REMOVE_GIG'
 export const ADD_GIG = 'ADD_GIG'
+
+export const SET_FILTER_BY = 'SET_FILTER_BY'
+
 export const UPDATE_GIG = 'UPDATE_GIG'
 export const ADD_GIG_MSG = 'ADD_GIG_MSG'
 
 const initialState = {
-  gigs:[],
+  gigs: [],
   gig: null,
+  filterBy: { txt: '', tag: '', minPrice: 0 },
 }
 
 export function gigReducer(state = initialState, action) {
@@ -35,14 +38,20 @@ export function gigReducer(state = initialState, action) {
       )
       newState = { ...state, gigs }
       break
+    case SET_FILTER_BY:
+      newState = {
+        ...state,
+        filterBy: { ...state.filterBy, ...action.filterBy },
+      }
+      break
     case ADD_GIG_MSG:
       if (action.msg && state.gig) {
         newState = {
           ...state,
           gig: { ...state.gig, msgs: [...(state.gig.msgs || []), action.msg] },
         }
-        break
       }
+      break
     default:
   }
   return newState
@@ -88,7 +97,7 @@ function unitTestReducer() {
   const msg = {
     id: 'm' + parseInt('' + Math.random() * 100),
     txt: 'Some msg',
-    by: { _id: 'u123', fullname: 'test' },
+    by: { _id: 'u123', fullName: 'test' },
   }
   state = gigReducer(state, { type: ADD_GIG_MSG, gigId: gig1._id, msg })
   console.log('After ADD_GIG_MSG:', state)
