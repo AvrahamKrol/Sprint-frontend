@@ -5,7 +5,7 @@
     "price": 12.16,
     "owner": {
       "_id": "u101",
-      "fullname": "Dudu Da",
+      "fullName": "Dudu Da",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
       "level": "basic/premium",
       "rate": 4
@@ -28,7 +28,7 @@
         "rate": 4,
         "by": {
           "_id": "u102",
-          "fullname": "user2",
+          "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
       }
@@ -280,7 +280,7 @@
     "price": 35,
     "owner": {
       "_id": "u102",
-      "fullname": "Maya Smith",
+      "fullName": "Maya Smith",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
       "level": "top rated",
       "rate": 5
@@ -303,7 +303,7 @@
         "rate": 4,
         "by": {
           "_id": "u102",
-          "fullname": "user2",
+          "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
       }
@@ -315,7 +315,7 @@
     "price": 25,
     "owner": {
       "_id": "u103",
-      "fullname": "Liam Jones",
+      "fullName": "Liam Jones",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
       "level": "level 2",
       "rate": 4.8
@@ -338,7 +338,7 @@
         "rate": 4,
         "by": {
           "_id": "u102",
-          "fullname": "user2",
+          "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
       }
@@ -350,7 +350,7 @@
     "price": 18,
     "owner": {
       "_id": "u104",
-      "fullname": "Ava Patel",
+      "fullName": "Ava Patel",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
       "level": "level 1",
       "rate": 4.7
@@ -373,7 +373,7 @@
         "rate": 4,
         "by": {
           "_id": "u102",
-          "fullname": "user2",
+          "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
       }
@@ -385,7 +385,7 @@
     "price": 42,
     "owner": {
       "_id": "u105",
-      "fullname": "Noah Kim",
+      "fullName": "Noah Kim",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
       "level": "top rated",
       "rate": 5
@@ -408,7 +408,7 @@
         "rate": 4,
         "by": {
           "_id": "u102",
-          "fullname": "user2",
+          "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
       }
@@ -420,7 +420,7 @@
     "price": 30,
     "owner": {
       "_id": "u106",
-      "fullname": "Sofia Garcia",
+      "fullName": "Sofia Garcia",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
       "level": "level 2",
       "rate": 4.9
@@ -443,7 +443,7 @@
         "rate": 4,
         "by": {
           "_id": "u102",
-          "fullname": "user2",
+          "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
       }
@@ -455,7 +455,7 @@
     "price": 55,
     "owner": {
       "_id": "u107",
-      "fullname": "Ethan Brown",
+      "fullName": "Ethan Brown",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
       "level": "top rated",
       "rate": 4.9
@@ -478,7 +478,7 @@
         "rate": 4,
         "by": {
           "_id": "u102",
-          "fullname": "user2",
+          "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
       }
@@ -490,7 +490,7 @@
     "price": 16,
     "owner": {
       "_id": "u108",
-      "fullname": "Isabella Chen",
+      "fullName": "Isabella Chen",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
       "level": "level 1",
       "rate": 4.6
@@ -513,7 +513,7 @@
         "rate": 4,
         "by": {
           "_id": "u102",
-          "fullname": "user2",
+          "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
       }
@@ -525,7 +525,7 @@
     "price": 20,
     "owner": {
       "_id": "u109",
-      "fullname": "Lucas Martin",
+      "fullName": "Lucas Martin",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
       "level": "level 2",
       "rate": 4.8
@@ -548,7 +548,7 @@
         "rate": 4,
         "by": {
           "_id": "u102",
-          "fullname": "user2",
+          "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
       }
@@ -560,7 +560,7 @@
     "price": 48,
     "owner": {
       "_id": "u110",
-      "fullname": "Olivia Wilson",
+      "fullName": "Olivia Wilson",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
       "level": "top rated",
       "rate": 5
@@ -583,7 +583,7 @@
         "rate": 4,
         "by": {
           "_id": "u102",
-          "fullname": "user2",
+          "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
       }

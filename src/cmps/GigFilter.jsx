@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 
-export function GigFilter({ filterBy, setFilterBy }) {
+import searchIcon from '../../public/icons/search-icon.svg'
+
+export function GigFilter({ cmpIn = 'header', filterBy, setFilterBy }) {
   const [filterToEdit, setFilterToEdit] = useState(structuredClone(filterBy))
 
   useEffect(() => {
@@ -8,25 +10,34 @@ export function GigFilter({ filterBy, setFilterBy }) {
   }, [filterToEdit])
 
   function handleChange(ev) {
-    const type = ev.target.type
-    const field = ev.target.name
-    let value
+    const { name, value } = ev.target
+    setFilterToEdit((prev) => ({ ...prev, [name]: value }))
+  }
 
-    switch (type) {
-      case 'text':
-      case 'radio':
-        value = field === 'sortDir' ? +ev.target.value : ev.target.value
-        if (!filterToEdit.sortDir) filterToEdit.sortDir = 1
-        break
-      case 'number':
-        value = +ev.target.value || ''
-        break
-    }
-    setFilterToEdit({ ...filterToEdit, [field]: value })
+  // function handleChange(ev) {
+  //   var { type, name, value } = ev.target
+
+  //   // switch (type) {
+  //   //   case 'search':
+  //   //   case 'radio':
+  //   //     // newValue = field === 'sortDir' ? +value : value
+  //   //     setFilterToEdit((prev) => ({ ...prev, [name]: value }))
+  //   //     // if (!filterToEdit.sortDir) filterToEdit?.sortDir = 1
+  //   //     break
+  //   //   case 'number':
+  //   //     // newValue = +value || ''
+  //   //     setFilterToEdit((prev) => ({ ...prev, [name]: +value }))
+  //   //     break
+  //   // }
+  // }
+
+  function onSubmit(ev) {
+    ev.preventDefault()
+    setFilterBy(filterToEdit)
   }
 
   function clearFilter() {
-    setFilterToEdit({ ...filterToEdit, txt: '', minPrice: ''})
+    setFilterToEdit({ ...filterToEdit, txt: '', minPrice: '' })
   }
 
   function clearSort() {
@@ -35,9 +46,19 @@ export function GigFilter({ filterBy, setFilterBy }) {
 
   return (
     <section className="gig-filter">
-
-      <div>
-
+      <form className={`search-bar search-bar--${cmpIn}`} onSubmit={onSubmit}>
+        <input
+          type="search"
+          placeholder="What service are you looking for today?"
+          name="txt"
+          value={filterToEdit.txt || ''}
+          onChange={handleChange}
+        />
+        <button type="submit">
+          <img src={searchIcon} alt="search" />
+        </button>
+      </form>
+      {/* <div>
       <h3>Filter:</h3>
       <input
         type="text"
@@ -59,8 +80,7 @@ export function GigFilter({ filterBy, setFilterBy }) {
       <button className="btn-clear" onClick={clearFilter}>
         Clear
       </button>
-      </div>
-      
+      </div> */}
       {/* <div>
       <h3>Sort:</h3>
       <div className="sort-field">

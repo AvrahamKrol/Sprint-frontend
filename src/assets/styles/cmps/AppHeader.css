@@ -1,11 +1,47 @@
 .app-header {
     display: flex;
-    /* min-height: 3.5rem; */
+    align-items: center;
 
-    background-color: var(--clr4);
-    padding: 1.25rem 2rem;
+    margin-block: 5px;
+    padding-block: var(--space-md);
 
-    & nav {
+    & .logo {
+        height: 2.8rem;
+        margin-inline-end: 1em;
+    }
+
+    & button {
+        margin: 0;
+        padding: var(--space-sm) var(--space-md);
+        min-width: 88px;
+        font-size: var(--space-md);
+        line-height: 1.5em;
+        border-radius: var(--space-sm);
+    }
+
+    & .auth-actions {
+        display: flex;
+        margin-inline-start: auto;
+        gap: var(--space-sm);
+
+        & .signin-link button {
+            background-color: transparent;
+            color: var(--clr-black);
+
+            &:hover {
+                background-color: var(--clr-gray-hov)
+            }
+        }
+
+        & .join-link button {
+            letter-spacing: 1px;
+            border: 1px solid #000;
+        }
+    }
+
+
+
+    /* & nav {
         display: flex;
         width: 100%;
         align-items: center;
@@ -17,20 +53,7 @@
             color: var(--clr1);
         }
 
-        .logo {
-            font-size: 1.4em;
-            font-weight: bold;
-            margin-inline-end: 2em;
-        }
-
-        .login-link {
-            margin-inline-start: auto;
-        }
-
-        & button {
-            margin-inline-end: 0;
-        }
-    }
+    } */
 
     .user-info {
         display: flex;

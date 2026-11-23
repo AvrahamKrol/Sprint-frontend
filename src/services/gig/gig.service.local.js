@@ -9,7 +9,13 @@ const STORAGE_KEY = 'gig'
 export const sortGigTags = {
   designAndCreative: ['Arts And Crafts', 'Logo Design', 'Web Design'],
   webDevelopment: ['WordPress', 'Web Development'],
-  videoAndAudio: ['Video Editing', 'Voiceover', 'Audio', 'Music', 'Composition'],
+  videoAndAudio: [
+    'Video Editing',
+    'Voiceover',
+    'Audio',
+    'Music',
+    'Composition',
+  ],
   writingAndTranslation: ['Writing', 'Translation', 'French'],
   digitalMarketing: ['Social Media', 'SEO'],
 }
@@ -42,7 +48,7 @@ export const gigService = {
 window.cs = gigService
 
 async function query(filterBy = { txt: '', minPrice: 0 }) {
-   var gigs = null//await storageService.query(STORAGE_KEY)
+  var gigs = null //await storageService.query(STORAGE_KEY)
   if (!gigs || !gigs.length) {
     gigs = _createGigs(data)
   }
@@ -57,14 +63,12 @@ async function query(filterBy = { txt: '', minPrice: 0 }) {
     gigs = gigs.filter((gig) => gig.price >= minPrice)
   }
 
-  if(tag){
+  if (tag) {
     gigs = gigs.filter((gig) => gig.tags.includes(tag))
   }
-  
-    gigs.sort(
-        (gig1, gig2) => gig2.owner.rate-gig1.owner.rate
-    )
-  
+
+  gigs.sort((gig1, gig2) => gig2.owner.rate - gig1.owner.rate)
+
   //   gigs = gigs.map(({ _id, vendor, speed, owner }) => ({
   //     _id,
   //     vendor,
@@ -98,9 +102,12 @@ async function save(gig) {
       imgUrls: [],
       title: gig.title,
       price: gig.price,
-      tags:[],
+      tags: [],
       // Later, owner is set by the backend
-      owner: userService.getLoggedinUser() || {fullName:'Bot',rate:getRandomIntInclusive(1,5)},
+      owner: userService.getLoggedinUser() || {
+        fullName: 'Bot',
+        rate: getRandomIntInclusive(1, 5),
+      },
       likedByUsers: ['Dany'],
     }
     savedGig = await storageService.post(STORAGE_KEY, gigToSave)

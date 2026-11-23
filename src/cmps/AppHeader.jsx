@@ -1,12 +1,25 @@
 import { Link, NavLink } from 'react-router-dom'
-import { useNavigate } from 'react-router'
+import { useLocation, useNavigate } from 'react-router'
 import { useSelector } from 'react-redux'
 import { showErrorMsg, showSuccessMsg } from '../services/event-bus.service'
 import { logout } from '../store/actions/user.actions'
+import { setFilterBy } from '../store/actions/gig.actions'
+
+import logo from '../../public/img/logo.png'
+import { GigFilter } from './GigFilter'
 
 export function AppHeader() {
   const user = useSelector((storeState) => storeState.userModule.user)
+  const filterBy = useSelector((storeState) => storeState.gigModule.filterBy)
   const navigate = useNavigate()
+  const { pathname } = useLocation()
+
+  function onSetFilterBy(filter) {
+    if (filter.txt === filterBy.txt) return
+    setFilterBy(filter)
+
+    if (pathname !== '/gig') navigate('/gig')
+  }
 
   async function onLogout() {
     try {
@@ -19,34 +32,21 @@ export function AppHeader() {
   }
 
   return (
-    <header className="app-header full">
-      <nav>
-        <NavLink to="/" className="logo">
-          E2E Demo
-        </NavLink>
-        <NavLink to="about">About</NavLink>
-        <NavLink to="gig">Gigs</NavLink>
-        <NavLink to="chat">Chat</NavLink>
-        <NavLink to="review">Review</NavLink>
-
-        {user?.isAdmin && <NavLink to="/admin">Admin</NavLink>}
-
-        {!user && (
-          <NavLink to="auth/login" className="login-link">
-            Login
+    <header className="app-header">
+      <NavLink to="/" className="logo">
+        <img className="logo" src={logo} alt="logo image" />
+      </NavLink>
+      <GigFilter filterBy={filterBy} setFilterBy={onSetFilterBy} />
+      {!user && (
+        <div className="auth-actions">
+          <NavLink to="auth/login" className="signin-link">
+            <button className="signin-link">Sign in</button>
           </NavLink>
-        )}
-        {user && (
-          <div className="user-info">
-            <Link to={`user/${user._id}`}>
-              {user.imgUrl && <img src={user.imgUrl} />}
-              {user.fullname}
-            </Link>
-            <span className="score">{user.score?.toLocaleString()}</span>
-            <button onClick={onLogout}>logout</button>
-          </div>
-        )}
-      </nav>
+          <NavLink to="auth/login">
+            <button className="join-link">Join</button>
+          </NavLink>
+        </div>
+      )}
     </header>
   )
 }
