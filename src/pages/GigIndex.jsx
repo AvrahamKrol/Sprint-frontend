@@ -18,17 +18,14 @@ import { userService } from '../services/user'
 import { GigList } from '../cmps/GigList'
 import { GigFilter } from '../cmps/GigFilter'
 import { Categories } from '../cmps/Categories'
+import { UserPreviewGigs } from './UserPreviewGigs'
 
 export function GigIndex() {
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
   const filterBy = useSelector((storeState) => storeState.gigModule.filterBy)
-  // const [popularGigs, setPopularGigs] = useState(null)
-  // const [topRatedGigs, setTopRatedGigs] = useState(null)
+  const loggedInUser = false
 
-  console.log(filterBy)
-  console.log(gigs)
-
-  const popularGigs = gigs.filter((gig) => gig.likedByUsers?.length === 1)
+  const popularGigs = gigs.filter((gig) => gig.likedByUsers?.length > 0)
   const topRatedGigs = gigs.filter((gig) => gig.owner?.level === 'top rated')
 
   const [params, setParams] = useSearchParams()
@@ -101,33 +98,29 @@ export function GigIndex() {
     }
   }
 
-  // function loadMostPopular() {
-  //   if (gigs.length === 0) return
-  //   const popularGigs = gigs.filter((gig) => gig.likedByUsers.length === 1)
-  //   setPopularGigs(popularGigs)
-  // }
-
-  // function loadTopRated() {
-  //   if (gigs.length === 0) return
-  //   const topRatedGigs = gigs.filter((gig) => gig.owner.level === 'top rated')
-  //   //console.log('topRatedGigs',topRatedGigs)
-  //   setTopRatedGigs(topRatedGigs)
-  // }
-
   if (!gigs || !popularGigs || !topRatedGigs) return <p>Loading...</p>
   return (
     <section className="gig-index">
+
       <Categories setFilterBy={setFilterBy} />
       <button style={{marginInline:0 }} onClick={onAddGig}>Add a Gig</button>
       {/* <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} /> */}
-      <GigList
+
+      {loggedInUser && <UserPreviewGigs
         gigs={gigs}
         filterBy={filterBy}
         onRemoveGig={onRemoveGig}
         onUpdateGig={onUpdateGig}
         popularGigs={popularGigs}
         topRatedGigs={topRatedGigs}
-      />
+      />}
+      
+      {loggedInUser || <GigList
+        gigs={gigs}
+        filterBy={filterBy}
+        onRemoveGig={onRemoveGig}
+        onUpdateGig={onUpdateGig}
+      />}
     </section>
   )
 }

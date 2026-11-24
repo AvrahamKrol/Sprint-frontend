@@ -2,7 +2,7 @@
 import { userService } from '../services/user'
 import { GigPreview } from './GigPreview'
 
-export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedGigs, filterBy }) {
+export function GigList({ gigs, onRemoveGig, onUpdateGig, filterBy }) {
 
    //console.log('F-popular',popularGigs)
   
@@ -18,51 +18,8 @@ export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedG
 
   return (
     <section>
-      {!filterBy.tag && <div>
-      <h1>Most Popoular Gigs</h1>
-      
-      <ul className="gig-list">
-        {popularGigs.map((gig) => (
-          <li key={gig._id}>
-            <GigPreview gig={gig} />
-            {shouldShowActionBtns(gig) && (
-              <div className="actions">
-                <button onClick={() => onUpdateGig(gig)}>Edit</button>
-                <button onClick={() => onRemoveGig(gig._id)}>x</button>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul> </div>}
-
-      {!filterBy.tag && <div><h1>Top Rated Gigs</h1>
-
-      <ul className="gig-list">
-        {topRatedGigs.map((gig) => (
-          <li key={gig._id}>
-            <GigPreview gig={gig} />
-            {shouldShowActionBtns(gig) && (
-              <div className="actions">
-                <button onClick={() => onUpdateGig(gig)}>Edit</button>
-                <button onClick={() => onRemoveGig(gig._id)}>x</button>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul></div>}
-
-      {filterBy.tag  && <div>
-
-      <div>
-      <select className='budget'>
-        <option >Budget</option>
-        <option>Value</option>
-        <option>Mid-range</option>
-        <option>Hige-end</option>
-        <option>Custom</option>
-      </select>
-      </div>
-
+    
+     <div>
       <h1>{filterBy.tag}</h1> 
       <ul className="gig-list">
         {gigs.map((gig) => (
@@ -76,7 +33,7 @@ export function GigList({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedG
             )}
           </li>
         ))}
-      </ul></div>}
+      </ul></div>
       
     </section>
   )
