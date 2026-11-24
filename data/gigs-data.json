@@ -1,184 +1,5 @@
 [
   {
-    "_id": "g101",
-    "title": "I will do programming of llm ai desktop application or bot",
-    "price": 12.16,
-    "owner": {
-      "_id": "u101",
-      "fullName": "Dudu Da",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "basic/premium",
-      "rate": 4
-    },
-    "daysToMake": 3,
-    "description": "Make unique logo...",
-    "avgResponseTime": 1,
-    "loc": "Ghana",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993684/54cffd5e371a90afc005d388f51f164ab63a4965.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["Arts And Crafts", "Logo Design"],
-    "likedByUsers": ["mini-user"],
-    "reviews": [
-      {
-        "id": "madeId",
-        "txt": "Did an amazing work",
-        "rate": 4,
-        "by": {
-          "_id": "u102",
-          "fullName": "user2",
-          "imgUrl": "/img/img2.jpg"
-        }
-      }
-    ]
-  },
-  {
-    "_id": "g111",
-    "title": "I will build a custom portfolio website",
-    "price": 45,
-    "owner": {
-      "_id": "u111",
-      "fullName": "Amira Hassan",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "level 2",
-      "rate": 4.8
-    },
-    "daysToMake": 5,
-    "description": "A responsive portfolio website that showcases your work and experience.",
-    "avgResponseTime": 2,
-    "loc": "Egypt",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795423041/e4836fc9f2f03516575020bc708b0191f292e6b2.jpg",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["Web Design", "WordPress"],
-    "likedByUsers": [],
-    "reviews": []
-  },
-  {
-    "_id": "g112",
-    "title": "I will write engaging blog posts",
-    "price": 22,
-    "owner": {
-      "_id": "u112",
-      "fullName": "Daniel Foster",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "level 1",
-      "rate": 4.7
-    },
-    "daysToMake": 3,
-    "description": "Clear, engaging blog posts researched and written for your audience.",
-    "avgResponseTime": 3,
-    "loc": "Ireland",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795423049/6f0dbb51666d9b76086892e3a9fac3d7c3878426.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["Writing", "SEO"],
-    "likedByUsers": [],
-    "reviews": []
-  },
-  {
-    "_id": "g113",
-    "title": "I will edit short videos for social media",
-    "price": 28,
-    "owner": {
-      "_id": "u113",
-      "fullName": "Chloe Bennett",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "top rated",
-      "rate": 4.9
-    },
-    "daysToMake": 2,
-    "description": "Fast-paced edits and captions for reels, shorts, and social posts.",
-    "avgResponseTime": 1,
-    "loc": "Australia",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795423028/93967478ad27e7508c490a6304978954d989955b.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["Video Editing", "Social Media"],
-    "likedByUsers": [],
-    "reviews": []
-  },
-  {
-    "_id": "g114",
-    "title": "I will record a clear professional voiceover",
-    "price": 32,
-    "owner": {
-      "_id": "u114",
-      "fullName": "Marcus Lee",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "level 2",
-      "rate": 4.8
-    },
-    "daysToMake": 2,
-    "description": "Studio-quality voiceover for videos, presentations, and advertisements.",
-    "avgResponseTime": 1,
-    "loc": "United States",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422992/6903015108d19372f2640b5a604e52e132c52ee6.jpg",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["Voiceover", "Audio"],
-    "likedByUsers": [],
-    "reviews": []
-  },
-  {
-    "_id": "g115",
-    "title": "I will create a custom logo for your business",
-    "price": 24,
-    "owner": {
-      "_id": "u115",
-      "fullName": "Nina Petrova",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "level 1",
-      "rate": 4.6
-    },
-    "daysToMake": 4,
-    "description": "A distinctive logo design made to fit your business identity.",
-    "avgResponseTime": 2,
-    "loc": "Bulgaria",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422980/6eeb55196442e4bfe655a9d50e14631917e143c2.jpg",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["Arts And Crafts", "Logo Design"],
-    "likedByUsers": [],
-    "reviews": []
-  },
-  {
-    "_id": "g116",
-    "title": "I will translate your content into French",
-    "price": 19,
-    "owner": {
-      "_id": "u116",
-      "fullName": "Étienne Moreau",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "level 2",
-      "rate": 4.9
-    },
-    "daysToMake": 3,
-    "description": "Accurate, natural French translation with attention to tone and context.",
-    "avgResponseTime": 2,
-    "loc": "France",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422982/f341da737cc9a77ba0517cd7053e03109bf8c668.jpg",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["Translation", "French"],
-    "likedByUsers": [],
-    "reviews": []
-  },
-  {
     "_id": "g117",
     "title": "I will compose original music for your video",
     "price": 50,
@@ -200,79 +21,33 @@
     ],
     "tags": ["Music", "Composition"],
     "likedByUsers": [],
-    "reviews": []
-  },
-  {
-    "_id": "g118",
-    "title": "I will customize your WordPress website",
-    "price": 60,
-    "owner": {
-      "_id": "u118",
-      "fullName": "Ravi Shah",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "level 2",
-      "rate": 4.9
-    },
-    "daysToMake": 6,
-    "description": "A customized WordPress site with useful features and a responsive layout.",
-    "avgResponseTime": 2,
-    "loc": "India",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422969/0aec64877387a639b31828139fc3ac810ced2219.jpg",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["WordPress", "Web Development"],
-    "likedByUsers": [],
-    "reviews": []
-  },
-  {
-    "_id": "g119",
-    "title": "I will plan social media content for your brand",
-    "price": 27,
-    "owner": {
-      "_id": "u119",
-      "fullName": "Zara Ahmed",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "level 1",
-      "rate": 4.7
-    },
-    "daysToMake": 3,
-    "description": "A practical content plan with post ideas for your social channels.",
-    "avgResponseTime": 2,
-    "loc": "United Arab Emirates",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422974/6b8e85ffe15f5fc21ff3dab01dace2a4366710c7.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["Social Media", "Writing"],
-    "likedByUsers": [],
-    "reviews": []
-  },
-  {
-    "_id": "g120",
-    "title": "I will develop a responsive business website",
-    "price": 70,
-    "owner": {
-      "_id": "u120",
-      "fullName": "Oliver Chen",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "top rated",
-      "rate": 4.9
-    },
-    "daysToMake": 7,
-    "description": "A responsive business website designed around your goals and content.",
-    "avgResponseTime": 2,
-    "loc": "Singapore",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422945/3155c103f803bf0386c326f89b26232f2c5788ee.jpg",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["Web Development", "Web Design"],
-    "likedByUsers": ["Gon"],
-    "reviews": []
+    "reviews": [],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 50,
+        "deliveryTime": 5,
+        "revisions": 1,
+        "description": "You will get custom original music created to complement your video or project."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 100,
+        "deliveryTime": 7,
+        "revisions": 3,
+        "description": "You will get custom original music created to complement your video or project. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 200,
+        "deliveryTime": 9,
+        "revisions": 5,
+        "description": "You will get custom original music created to complement your video or project. Includes the complete solution with advanced features and priority service."
+      }
+    ]
   },
   {
     "_id": "g102",
@@ -307,82 +82,38 @@
           "imgUrl": "/img/img2.jpg"
         }
       }
-    ]
-  },
-  {
-    "_id": "g103",
-    "title": "I will edit your videos professionally",
-    "price": 25,
-    "owner": {
-      "_id": "u103",
-      "fullName": "Liam Jones",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "level 2",
-      "rate": 4.8
-    },
-    "daysToMake": 2,
-    "description": "Clean and engaging video editing for social media or business.",
-    "avgResponseTime": 1,
-    "loc": "United Kingdom",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/c9b366a2d6add8945098febe1e9ab2de997bc3d7.jpg",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
     ],
-    "tags": ["Video Editing", "Social Media"],
-    "likedByUsers": ["mini-user"],
-    "reviews": [
+    "packages": [
       {
-        "id": "madeId",
-        "txt": "Did an amazing work",
-        "rate": 4,
-        "by": {
-          "_id": "u102",
-          "fullName": "user2",
-          "imgUrl": "/img/img2.jpg"
-        }
-      }
-    ]
-  },
-  {
-    "_id": "g104",
-    "title": "I will write SEO-friendly articles",
-    "price": 18,
-    "owner": {
-      "_id": "u104",
-      "fullName": "Ava Patel",
-      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "level 1",
-      "rate": 4.7
-    },
-    "daysToMake": 3,
-    "description": "Well-researched, original articles optimized for search.",
-    "avgResponseTime": 3,
-    "loc": "India",
-    "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/a6cd67702f6f025c89861951c88fc9667e1ff623.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
-    ],
-    "tags": ["Writing", "SEO"],
-    "likedByUsers": ["Dan"],
-    "reviews": [
+        "type": "basic",
+        "title": "Basic",
+        "price": 35,
+        "deliveryTime": 5,
+        "revisions": 1,
+        "description": "You will get responsive, modern website design tailored to your business."
+      },
       {
-        "id": "madeId",
-        "txt": "Did an amazing work",
-        "rate": 4,
-        "by": {
-          "_id": "u102",
-          "fullName": "user2",
-          "imgUrl": "/img/img2.jpg"
-        }
+        "type": "standard",
+        "title": "Standard",
+        "price": 70,
+        "deliveryTime": 7,
+        "revisions": 3,
+        "description": "You will get responsive, modern website design tailored to your business. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 140,
+        "deliveryTime": 9,
+        "revisions": 5,
+        "description": "You will get responsive, modern website design tailored to your business. Includes the complete solution with advanced features and priority service."
       }
     ]
   },
   {
     "_id": "g105",
     "title": "I will illustrate a custom character",
-    "price": 42,
+    "price": 52,
     "owner": {
       "_id": "u105",
       "fullName": "Noah Kim",
@@ -411,6 +142,293 @@
           "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
+      }
+    ],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 52,
+        "deliveryTime": 6,
+        "revisions": 1,
+        "description": "You will get a detailed custom character illustration in your preferred style."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 104,
+        "deliveryTime": 8,
+        "revisions": 3,
+        "description": "You will get a detailed custom character illustration in your preferred style. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 208,
+        "deliveryTime": 10,
+        "revisions": 5,
+        "description": "You will get a detailed custom character illustration in your preferred style. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g110",
+    "title": "I will compose original background music",
+    "price": 48,
+    "owner": {
+      "_id": "u110",
+      "fullName": "Olivia Wilson",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "top rated",
+      "rate": 5
+    },
+    "daysToMake": 5,
+    "description": "Original background music composed for your project.",
+    "avgResponseTime": 3,
+    "loc": "Australia",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/7ccd4f3719f3f216b45b8d1d72250f6c68d7de0c.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Music", "Composition"],
+    "likedByUsers": [],
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Did an amazing work",
+        "rate": 4,
+        "by": {
+          "_id": "u102",
+          "fullName": "user2",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 48,
+        "deliveryTime": 5,
+        "revisions": 1,
+        "description": "You will get original background music composed for your project."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 96,
+        "deliveryTime": 7,
+        "revisions": 3,
+        "description": "You will get original background music composed for your project. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 192,
+        "deliveryTime": 9,
+        "revisions": 5,
+        "description": "You will get original background music composed for your project. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g113",
+    "title": "I will edit short videos for social media",
+    "price": 28,
+    "owner": {
+      "_id": "u113",
+      "fullName": "Chloe Bennett",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "top rated",
+      "rate": 4.9
+    },
+    "daysToMake": 2,
+    "description": "Fast-paced edits and captions for reels, shorts, and social posts.",
+    "avgResponseTime": 1,
+    "loc": "Australia",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795423028/93967478ad27e7508c490a6304978954d989955b.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Video Editing", "Social Media"],
+    "likedByUsers": [],
+    "reviews": [],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 28,
+        "deliveryTime": 2,
+        "revisions": 1,
+        "description": "You will get fast-paced edits and captions for reels, shorts, and social posts."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 56,
+        "deliveryTime": 4,
+        "revisions": 3,
+        "description": "You will get fast-paced edits and captions for reels, shorts, and social posts. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 112,
+        "deliveryTime": 6,
+        "revisions": 5,
+        "description": "You will get fast-paced edits and captions for reels, shorts, and social posts. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g116",
+    "title": "I will translate your content into French",
+    "price": 19,
+    "owner": {
+      "_id": "u116",
+      "fullName": "Étienne Moreau",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "level 2",
+      "rate": 4.9
+    },
+    "daysToMake": 3,
+    "description": "Accurate, natural French translation with attention to tone and context.",
+    "avgResponseTime": 2,
+    "loc": "France",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422982/f341da737cc9a77ba0517cd7053e03109bf8c668.jpg",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Translation", "French"],
+    "likedByUsers": [],
+    "reviews": [],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 19,
+        "deliveryTime": 3,
+        "revisions": 1,
+        "description": "You will get accurate, natural French translation with attention to tone and context."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 38,
+        "deliveryTime": 5,
+        "revisions": 3,
+        "description": "You will get accurate, natural French translation with attention to tone and context. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 76,
+        "deliveryTime": 7,
+        "revisions": 5,
+        "description": "You will get accurate, natural French translation with attention to tone and context. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g118",
+    "title": "I will customize your WordPress website",
+    "price": 60,
+    "owner": {
+      "_id": "u118",
+      "fullName": "Ravi Shah",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "level 2",
+      "rate": 4.9
+    },
+    "daysToMake": 6,
+    "description": "A customized WordPress site with useful features and a responsive layout.",
+    "avgResponseTime": 2,
+    "loc": "India",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422969/0aec64877387a639b31828139fc3ac810ced2219.jpg",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["WordPress", "Web Development"],
+    "likedByUsers": [],
+    "reviews": [],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 60,
+        "deliveryTime": 6,
+        "revisions": 1,
+        "description": "You will get a customized WordPress site with useful features and a responsive layout."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 120,
+        "deliveryTime": 8,
+        "revisions": 3,
+        "description": "You will get a customized WordPress site with useful features and a responsive layout. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 240,
+        "deliveryTime": 10,
+        "revisions": 5,
+        "description": "You will get a customized WordPress site with useful features and a responsive layout. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g120",
+    "title": "I will develop a responsive business website",
+    "price": 70,
+    "owner": {
+      "_id": "u120",
+      "fullName": "Oliver Chen",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "top rated",
+      "rate": 4.9
+    },
+    "daysToMake": 7,
+    "description": "A responsive business website designed around your goals and content.",
+    "avgResponseTime": 2,
+    "loc": "Singapore",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422945/3155c103f803bf0386c326f89b26232f2c5788ee.jpg",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Web Development", "Web Design"],
+    "likedByUsers": ["Gon"],
+    "reviews": [],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 70,
+        "deliveryTime": 7,
+        "revisions": 1,
+        "description": "You will get a responsive business website designed around your goals and content."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 140,
+        "deliveryTime": 9,
+        "revisions": 3,
+        "description": "You will get a responsive business website designed around your goals and content. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 280,
+        "deliveryTime": 11,
+        "revisions": 5,
+        "description": "You will get a responsive business website designed around your goals and content. Includes the complete solution with advanced features and priority service."
       }
     ]
   },
@@ -447,6 +465,32 @@
           "imgUrl": "/img/img2.jpg"
         }
       }
+    ],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 30,
+        "deliveryTime": 2,
+        "revisions": 1,
+        "description": "You will get warm, clear voiceover for your video, ad, or presentation."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 60,
+        "deliveryTime": 4,
+        "revisions": 3,
+        "description": "You will get warm, clear voiceover for your video, ad, or presentation. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 120,
+        "deliveryTime": 6,
+        "revisions": 5,
+        "description": "You will get warm, clear voiceover for your video, ad, or presentation. Includes the complete solution with advanced features and priority service."
+      }
     ]
   },
   {
@@ -482,30 +526,156 @@
           "imgUrl": "/img/img2.jpg"
         }
       }
+    ],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 55,
+        "deliveryTime": 7,
+        "revisions": 1,
+        "description": "You will get a polished WordPress website built around your brand and goals."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 110,
+        "deliveryTime": 9,
+        "revisions": 3,
+        "description": "You will get a polished WordPress website built around your brand and goals. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 220,
+        "deliveryTime": 11,
+        "revisions": 5,
+        "description": "You will get a polished WordPress website built around your brand and goals. Includes the complete solution with advanced features and priority service."
+      }
     ]
   },
   {
-    "_id": "g108",
-    "title": "I will create social media graphics",
-    "price": 16,
+    "_id": "g111",
+    "title": "I will build a custom portfolio website",
+    "price": 45,
     "owner": {
-      "_id": "u108",
-      "fullName": "Isabella Chen",
+      "_id": "u111",
+      "fullName": "Amira Hassan",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "level 1",
-      "rate": 4.6
+      "level": "level 2",
+      "rate": 4.8
     },
-    "daysToMake": 2,
-    "description": "Eye-catching branded graphics for your social media channels.",
-    "avgResponseTime": 1,
-    "loc": "Singapore",
+    "daysToMake": 5,
+    "description": "A responsive portfolio website that showcases your work and experience.",
+    "avgResponseTime": 2,
+    "loc": "Egypt",
     "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022949/64844d2877638a65f7215ad967fa87cb351b037d.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795423041/e4836fc9f2f03516575020bc708b0191f292e6b2.jpg",
       "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
       "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
     ],
-    "tags": ["Social Media", "Logo Design"],
+    "tags": ["Web Design", "WordPress"],
     "likedByUsers": [],
+    "reviews": [],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 45,
+        "deliveryTime": 5,
+        "revisions": 1,
+        "description": "You will get a responsive portfolio website that showcases your work and experience."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 90,
+        "deliveryTime": 7,
+        "revisions": 3,
+        "description": "You will get a responsive portfolio website that showcases your work and experience. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 180,
+        "deliveryTime": 9,
+        "revisions": 5,
+        "description": "You will get a responsive portfolio website that showcases your work and experience. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g114",
+    "title": "I will record a clear professional voiceover",
+    "price": 32,
+    "owner": {
+      "_id": "u114",
+      "fullName": "Marcus Lee",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "level 2",
+      "rate": 4.8
+    },
+    "daysToMake": 2,
+    "description": "Studio-quality voiceover for videos, presentations, and advertisements.",
+    "avgResponseTime": 1,
+    "loc": "United States",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422992/6903015108d19372f2640b5a604e52e132c52ee6.jpg",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Voiceover", "Audio"],
+    "likedByUsers": [],
+    "reviews": [],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 32,
+        "deliveryTime": 2,
+        "revisions": 1,
+        "description": "You will get studio-quality voiceover for videos, presentations, and advertisements."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 64,
+        "deliveryTime": 4,
+        "revisions": 3,
+        "description": "You will get studio-quality voiceover for videos, presentations, and advertisements. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 128,
+        "deliveryTime": 6,
+        "revisions": 5,
+        "description": "You will get studio-quality voiceover for videos, presentations, and advertisements. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g103",
+    "title": "I will edit your videos professionally",
+    "price": 25,
+    "owner": {
+      "_id": "u103",
+      "fullName": "Liam Jones",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "level 2",
+      "rate": 4.8
+    },
+    "daysToMake": 2,
+    "description": "Clean and engaging video editing for social media or business.",
+    "avgResponseTime": 1,
+    "loc": "United Kingdom",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/c9b366a2d6add8945098febe1e9ab2de997bc3d7.jpg",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Video Editing", "Social Media"],
+    "likedByUsers": ["mini-user"],
     "reviews": [
       {
         "id": "madeId",
@@ -516,6 +686,32 @@
           "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
+      }
+    ],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 25,
+        "deliveryTime": 2,
+        "revisions": 1,
+        "description": "You will get clean and engaging video editing for social media or business."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 50,
+        "deliveryTime": 4,
+        "revisions": 3,
+        "description": "You will get clean and engaging video editing for social media or business. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 100,
+        "deliveryTime": 6,
+        "revisions": 5,
+        "description": "You will get clean and engaging video editing for social media or business. Includes the complete solution with advanced features and priority service."
       }
     ]
   },
@@ -552,29 +748,266 @@
           "imgUrl": "/img/img2.jpg"
         }
       }
+    ],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 20,
+        "deliveryTime": 3,
+        "revisions": 1,
+        "description": "You will get natural, accurate English-to-French translation with proofreading."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 40,
+        "deliveryTime": 5,
+        "revisions": 3,
+        "description": "You will get natural, accurate English-to-French translation with proofreading. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 80,
+        "deliveryTime": 7,
+        "revisions": 5,
+        "description": "You will get natural, accurate English-to-French translation with proofreading. Includes the complete solution with advanced features and priority service."
+      }
     ]
   },
   {
-    "_id": "g110",
-    "title": "I will compose original background music",
-    "price": 48,
+    "_id": "g112",
+    "title": "I will write engaging blog posts",
+    "price": 22,
     "owner": {
-      "_id": "u110",
-      "fullName": "Olivia Wilson",
+      "_id": "u112",
+      "fullName": "Daniel Foster",
       "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
-      "level": "top rated",
-      "rate": 5
+      "level": "level 1",
+      "rate": 4.7
     },
-    "daysToMake": 5,
-    "description": "Original background music composed for your project.",
+    "daysToMake": 3,
+    "description": "Clear, engaging blog posts researched and written for your audience.",
     "avgResponseTime": 3,
-    "loc": "Australia",
+    "loc": "Ireland",
     "imgUrls": [
-      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/7ccd4f3719f3f216b45b8d1d72250f6c68d7de0c.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795423049/6f0dbb51666d9b76086892e3a9fac3d7c3878426.webp",
       "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
       "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
     ],
-    "tags": ["Music", "Composition"],
+    "tags": ["Writing", "SEO"],
+    "likedByUsers": [],
+    "reviews": [],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 22,
+        "deliveryTime": 3,
+        "revisions": 1,
+        "description": "You will get clear, engaging blog posts researched and written for your audience."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 44,
+        "deliveryTime": 5,
+        "revisions": 3,
+        "description": "You will get clear, engaging blog posts researched and written for your audience. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 88,
+        "deliveryTime": 7,
+        "revisions": 5,
+        "description": "You will get clear, engaging blog posts researched and written for your audience. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g119",
+    "title": "I will plan social media content for your brand",
+    "price": 27,
+    "owner": {
+      "_id": "u119",
+      "fullName": "Zara Ahmed",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "level 1",
+      "rate": 4.7
+    },
+    "daysToMake": 3,
+    "description": "A practical content plan with post ideas for your social channels.",
+    "avgResponseTime": 2,
+    "loc": "United Arab Emirates",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422974/6b8e85ffe15f5fc21ff3dab01dace2a4366710c7.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Social Media", "Writing"],
+    "likedByUsers": [],
+    "reviews": [],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 27,
+        "deliveryTime": 3,
+        "revisions": 1,
+        "description": "You will get a practical content plan with post ideas for your social channels."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 54,
+        "deliveryTime": 5,
+        "revisions": 3,
+        "description": "You will get a practical content plan with post ideas for your social channels. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 108,
+        "deliveryTime": 7,
+        "revisions": 5,
+        "description": "You will get a practical content plan with post ideas for your social channels. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g104",
+    "title": "I will write SEO-friendly articles",
+    "price": 18,
+    "owner": {
+      "_id": "u104",
+      "fullName": "Ava Patel",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "level 1",
+      "rate": 4.7
+    },
+    "daysToMake": 3,
+    "description": "Well-researched, original articles optimized for search.",
+    "avgResponseTime": 3,
+    "loc": "India",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022950/a6cd67702f6f025c89861951c88fc9667e1ff623.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Writing", "SEO"],
+    "likedByUsers": ["Dan"],
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Did an amazing work",
+        "rate": 4,
+        "by": {
+          "_id": "u102",
+          "fullName": "user2",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 18,
+        "deliveryTime": 3,
+        "revisions": 1,
+        "description": "You will get well-researched, original articles optimized for search."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 36,
+        "deliveryTime": 5,
+        "revisions": 3,
+        "description": "You will get well-researched, original articles optimized for search. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 72,
+        "deliveryTime": 7,
+        "revisions": 5,
+        "description": "You will get well-researched, original articles optimized for search. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g115",
+    "title": "I will create a custom logo for your business",
+    "price": 24,
+    "owner": {
+      "_id": "u115",
+      "fullName": "Nina Petrova",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "level 1",
+      "rate": 4.6
+    },
+    "daysToMake": 4,
+    "description": "A distinctive logo design made to fit your business identity.",
+    "avgResponseTime": 2,
+    "loc": "Bulgaria",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795422980/6eeb55196442e4bfe655a9d50e14631917e143c2.jpg",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Arts And Crafts", "Logo Design"],
+    "likedByUsers": [],
+    "reviews": [],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 24,
+        "deliveryTime": 4,
+        "revisions": 1,
+        "description": "You will get a distinctive logo design made to fit your business identity."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 48,
+        "deliveryTime": 6,
+        "revisions": 3,
+        "description": "You will get a distinctive logo design made to fit your business identity. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 96,
+        "deliveryTime": 8,
+        "revisions": 5,
+        "description": "You will get a distinctive logo design made to fit your business identity. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g108",
+    "title": "I will create social media graphics",
+    "price": 16,
+    "owner": {
+      "_id": "u108",
+      "fullName": "Isabella Chen",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "level 1",
+      "rate": 4.6
+    },
+    "daysToMake": 2,
+    "description": "Eye-catching branded graphics for your social media channels.",
+    "avgResponseTime": 1,
+    "loc": "Singapore",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795022949/64844d2877638a65f7215ad967fa87cb351b037d.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Social Media", "Logo Design"],
     "likedByUsers": [],
     "reviews": [
       {
@@ -586,6 +1019,93 @@
           "fullName": "user2",
           "imgUrl": "/img/img2.jpg"
         }
+      }
+    ],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 16,
+        "deliveryTime": 2,
+        "revisions": 1,
+        "description": "You will get eye-catching branded graphics for your social media channels."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 32,
+        "deliveryTime": 4,
+        "revisions": 3,
+        "description": "You will get eye-catching branded graphics for your social media channels. Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 64,
+        "deliveryTime": 6,
+        "revisions": 5,
+        "description": "You will get eye-catching branded graphics for your social media channels. Includes the complete solution with advanced features and priority service."
+      }
+    ]
+  },
+  {
+    "_id": "g101",
+    "title": "I will do programming of llm ai desktop application or bot",
+    "price": 12.16,
+    "owner": {
+      "_id": "u101",
+      "fullName": "Dudu Da",
+      "imgUrl": "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993705/be04c8e5-2fee-4bfb-ad1a-8c2a969a1ffc.webp",
+      "level": "basic/premium",
+      "rate": 4
+    },
+    "daysToMake": 3,
+    "description": "Make unique logo...",
+    "avgResponseTime": 1,
+    "loc": "Ghana",
+    "imgUrls": [
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1794993684/54cffd5e371a90afc005d388f51f164ab63a4965.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795244092/d387c66efa952c73c90213927c3383aeaf0f73a9.webp",
+      "https://res.cloudinary.com/z6rg2bwn/image/upload/v1795239833/Dashboard100.webp"
+    ],
+    "tags": ["Arts And Crafts", "Logo Design"],
+    "likedByUsers": ["mini-user"],
+    "reviews": [
+      {
+        "id": "madeId",
+        "txt": "Did an amazing work",
+        "rate": 4,
+        "by": {
+          "_id": "u102",
+          "fullName": "user2",
+          "imgUrl": "/img/img2.jpg"
+        }
+      }
+    ],
+    "packages": [
+      {
+        "type": "basic",
+        "title": "Basic",
+        "price": 12.16,
+        "deliveryTime": 3,
+        "revisions": 1,
+        "description": "You will get make unique logo..."
+      },
+      {
+        "type": "standard",
+        "title": "Standard",
+        "price": 24,
+        "deliveryTime": 5,
+        "revisions": 3,
+        "description": "You will get make unique logo... Includes additional features and more customization."
+      },
+      {
+        "type": "premium",
+        "title": "Premium",
+        "price": 49,
+        "deliveryTime": 7,
+        "revisions": 5,
+        "description": "You will get make unique logo... Includes the complete solution with advanced features and priority service."
       }
     ]
   }

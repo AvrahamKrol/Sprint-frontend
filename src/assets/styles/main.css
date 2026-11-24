@@ -26,7 +26,7 @@
 @import "cmps/gig/GigPreview";
 @import "cmps/gig/GigFilter";
 @import "cmps/gig/Categories";
-@import "cmps/gig/GigOrders";
+@import "cmps/gig/GigPackages";
 
 @import "cmps/review/ReviewEdit";
 @import "cmps/review/ReviewList";

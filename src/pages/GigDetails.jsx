@@ -7,34 +7,7 @@ import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
 import { loadGig, addGigMsg } from '../store/actions/gig.actions'
 import { Rating } from '../cmps/Rating.jsx'
 import { ImageGallery } from '../cmps/ImageGallery.jsx'
-import { GigOrders } from '../cmps/GigOrders.jsx'
-
-const orders = [
-  {
-    type: 'basic',
-    title: 'Basic',
-    price: 50,
-    deliveryTime: '2 days',
-    revisions: 1,
-    description: 'Basic website design',
-  },
-  {
-    type: 'standard',
-    title: 'Standard',
-    price: 100,
-    deliveryTime: '3 days',
-    revisions: 3,
-    description: 'Standard website design',
-  },
-  {
-    type: 'premium',
-    title: 'Premium',
-    price: 200,
-    deliveryTime: '5 days',
-    revisions: 5,
-    description: 'Complete website design',
-  },
-]
+import { GigPackages } from '../cmps/GigPackages.jsx'
 
 export function GigDetails() {
   const { gigId } = useParams()
@@ -82,7 +55,7 @@ export function GigDetails() {
         </div>
       </article>
       <article className="details-sidebar">
-        <GigOrders orders={orders} />
+        <GigPackages packages={gig?.packages} />
       </article>
     </section>
   )
