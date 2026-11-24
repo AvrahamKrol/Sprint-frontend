@@ -1,4 +1,4 @@
-import { GigPreview } from "../cmps/GigPreview"
+import { GigPreview } from "./GigPreview"
 
 export function UserPreviewGigs({ gigs, onRemoveGig, onUpdateGig, popularGigs ,topRatedGigs, filterBy }){
     

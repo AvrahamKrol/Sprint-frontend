@@ -2,12 +2,11 @@ import { useState, useEffect } from "react"
 
 import { sortGigTags } from "../services/gig/gig.service.local"
 
+
 export function Categories({setFilterBy}){
     
     const [ tags,setTags ] = useState(null)
     
-    //console.log('tags',tags)
-
     function laodTags(category){
        setTags(sortGigTags[category])
     }

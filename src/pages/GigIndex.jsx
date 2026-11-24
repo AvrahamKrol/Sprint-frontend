@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+
 
 import {
   loadGigs,
@@ -16,23 +17,22 @@ import { gigService } from '../services/gig/'
 import { userService } from '../services/user'
 
 import { GigList } from '../cmps/GigList'
-import { GigFilter } from '../cmps/GigFilter'
+//import { GigFilter } from '../cmps/GigFilter'
 import { Categories } from '../cmps/Categories'
-import { UserPreviewGigs } from './UserPreviewGigs'
+import { UserPreviewGigs } from '../cmps/UserPreviewGigs'
+
 
 export function GigIndex() {
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
   const filterBy = useSelector((storeState) => storeState.gigModule.filterBy)
+  
   const loggedInUser = false
 
   const popularGigs = gigs.filter((gig) => gig.likedByUsers?.length > 0)
   const topRatedGigs = gigs.filter((gig) => gig.owner?.level === 'top rated')
 
   const [params, setParams] = useSearchParams()
-  // const [filterBy, setFilterBy] = useState(pullParams())
-
-  //console.log('G',gigs)
-
+  
   useEffect(() => {
     const { txt, tag, minPrice } = pullParams()
     if (txt || tag || minPrice) {
@@ -41,11 +41,11 @@ export function GigIndex() {
   }, [])
 
   useEffect(() => {
+    
+    const updateParams = cleanParams(filterBy)
+    setParams(updateParams)
     loadGigs(filterBy)
 
-    const updateParams = cleanParams(filterBy)
-
-    setParams(updateParams)
   }, [filterBy])
 
   // useEffect(() => {
