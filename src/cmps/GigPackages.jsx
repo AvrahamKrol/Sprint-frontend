@@ -25,6 +25,7 @@ export function GigPackages({ packages = [] }) {
       </div>
 
       <div className="package-content">
+        <h3>{`${currentPackage.title} Starts At`}</h3>
         <div className="package-price-container">
           <h3>₪{currentPackage.price}</h3>
           <p>Includes taxes and service fees</p>
@@ -45,7 +46,6 @@ export function GigPackages({ packages = [] }) {
             <span>{currentPackage.revisions} revisions</span>
           </li>
         </ul>
-
         <button className="continue-btn">Continue</button>
       </div>
     </section>

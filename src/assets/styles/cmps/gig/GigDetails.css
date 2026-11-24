@@ -5,6 +5,7 @@
   align-items: start;
   max-width: var(--container-max);
   padding-block-start: 1rem;
+  margin-block-end: 64px;
 
   .details-main {
     grid-column: 1;

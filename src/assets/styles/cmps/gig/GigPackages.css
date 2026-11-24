@@ -29,6 +29,12 @@
   padding: 24px;
   border: 1px solid #ddd;
 
+  &>h3 {
+    font-size: var(--space-md);
+    /* color: var(--clr-black); */
+    color: #404145
+  }
+
   & .package-price-container {
     margin-block-end: 1.5rem;
 
