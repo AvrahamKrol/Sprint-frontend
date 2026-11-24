@@ -2,7 +2,7 @@
     color: var(--gray4);
     
     .gig-img{
-        border-radius: 10px;
+        border-radius: 1rem;
     }   
     
     .gig-owner{
@@ -55,7 +55,8 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 1em;
+    height: 52%;
+    margin-bottom: 1rem;
     
     overflow: hidden;
 }

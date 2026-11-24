@@ -1,20 +1,24 @@
 .gig-list {
-    --min-column-size: 220px;
-
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
-    gap: 2em;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    column-gap: 30px;
+    row-gap: 2.5rem;
     
+    margin-top: 16px;
     margin-bottom: 50px;
     
     
     
     & li {
+        position: relative;
         display: grid;
         background-color: #fff;
+        height: 100%;
         
         .actions {
-            justify-self: end;
+            position: absolute;
+            bottom: 1em;
+            right: 0;
 
             & button {
                 padding: .3em .5em;
@@ -34,7 +38,7 @@
     color: black;
     background-color: #fff;
     border: 1px solid gray;
-    border-radius: .5em;
+    border-radius: 8px;
     font-weight: bold;
     font-size: 18px;
 }
