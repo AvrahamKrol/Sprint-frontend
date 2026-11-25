@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
 
 
 import {
@@ -29,6 +28,8 @@ export function GigIndex() {
 
   const [params, setParams] = useSearchParams()
   
+  const loggedInUser = false
+
   useEffect(() => {
     const { txt, tag, minPrice } = pullParams()
     if (txt || tag || minPrice) {
