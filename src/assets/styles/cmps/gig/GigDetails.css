@@ -1,18 +1,16 @@
 .gig-details {
   position: relative;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(0, 2fr) 1fr;
   align-items: start;
-  /* gap: 10rem; */
   max-width: var(--container-max);
-  /* overflow-wrap: break-word; */
   padding-block-start: 1rem;
+  margin-block-end: 64px;
 
-  /* margin: 0 auto; */
-  /* padding: 0 var(--space-lg); */
   .details-main {
     grid-column: 1;
-    margin-inline-end: 9.15%;
+
+    margin-inline-end: 14.15%;
 
     .gig-title {
       font-size: 1.5rem;
@@ -49,7 +47,7 @@
       .owner-rating {
         display: flex;
         gap: var(--space-xs);
-        align-items: baseline;
+        align-items: stretch;
         color: var(--clr-black);
 
         .rating {
@@ -89,6 +87,10 @@
       font-size: .875em;
       font-weight: 600;
       line-height: 30px;
+    }
+
+    & .main-image img {
+      width: 100%;
     }
   }
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -13,8 +14,6 @@ import {
 } from '../store/actions/gig.actions'
 
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service'
-import { gigService } from '../services/gig/'
-import { userService } from '../services/user'
 
 import { GigList } from '../cmps/GigList'
 //import { GigFilter } from '../cmps/GigFilter'
@@ -25,9 +24,6 @@ import { UserPreviewGigs } from '../cmps/UserPreviewGigs'
 export function GigIndex() {
   const gigs = useSelector((storeState) => storeState.gigModule.gigs)
   const filterBy = useSelector((storeState) => storeState.gigModule.filterBy)
-  
-  const loggedInUser = false
-
   const popularGigs = gigs.filter((gig) => gig.likedByUsers?.length > 0)
   const topRatedGigs = gigs.filter((gig) => gig.owner?.level === 'top rated')
 
@@ -80,7 +76,7 @@ export function GigIndex() {
   }
 
   async function onAddGig() {
-    const gig = {price:0 ,owner:{}}
+    const gig = { price: 0, owner: {} }
     try {
       const savedGig = await addGig(gig)
       showSuccessMsg(`Gig added (id: ${savedGig._id})`)
@@ -103,7 +99,9 @@ export function GigIndex() {
     <section className="gig-index">
 
       <Categories setFilterBy={setFilterBy} />
-      <button style={{marginInline:0 }} onClick={onAddGig}>Add a Gig</button>
+      <button style={{ marginInline: 0 }} onClick={onAddGig}>
+        Add a Gig
+      </button>
       {/* <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} /> */}
 
       {loggedInUser && <UserPreviewGigs

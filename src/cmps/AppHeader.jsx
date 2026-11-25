@@ -34,7 +34,7 @@ export function AppHeader() {
   return (
     <header className="app-header">
       <NavLink to="/" className="logo">
-        <img className="logo" src={logo} alt="logo image" />
+        <img className="logo logo-img" src={logo} alt="logo image" />
       </NavLink>
       <GigFilter filterBy={filterBy} setFilterBy={onSetFilterBy} />
       {!user && (
