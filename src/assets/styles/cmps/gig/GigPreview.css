@@ -2,7 +2,7 @@
     color: var(--gray4);
     
     .gig-img{
-        border-radius: 1rem;
+        border-radius: .5rem;
     }   
     
     .gig-owner{
@@ -14,6 +14,12 @@
         width: 30px;
         margin-inline-end: 1em;
         border-radius: 50%;
+        background-color: #b5b6ba;
+        filter: 
+        drop-shadow(0 0 .880517px rgba(0, 0, 0, .027)) 
+        drop-shadow(0 0 2.29197px rgba(0, 0, 0, .03)) 
+        drop-shadow(0 0 5.52px rgba(0, 0, 0, .055)) 
+        drop-shadow(0 0 11px rgba(0, 0, 0, .09));
     }
 
     p {
@@ -25,28 +31,78 @@
 
     &  .gig-link {
     height: 53px;
-    margin-bottom: 1em;
-    
+    margin-bottom: .8em;
+     
+    color: #404145;
+
     font-size: 1.2em;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 30px;
     overflow: clip;
 }
 
 
 .owner-name-div{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.owner-name-img{
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.level-div{
+    display: flex;
+    align-items: center;
+    gap:.4em;
+    padding-inline: 0.6em;
+    padding-block: .2em;
+    padding-bottom: .4em;
+
+    background-color:#ffe0b3;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.dimond-div{
+    display: flex;
+    gap: .1em;
+    align-items: center;
 }
 
 .rate-div{
    display: flex;
+   align-items: center;
+   gap: 4px;
    margin-bottom: 1em;
+
+   font-size: 17px;
+   font-weight: 700;
 }
 
 .rate-star{
-   width: 24px;
-   height: 24px;
-   margin-inline-end: .3em;
+   width: 20px;
+   height: 20px;
+}
+
+.price{
+    display: flex;
+    gap: .5em;
+
+    font-size: 1.3em;
+    font-weight: 700;
+
+    img{
+        align-self: self-end;
+
+        width: 20px;
+        height: 20px;
+    }
 }
 
 }
@@ -55,7 +111,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    height: 52%;
+    height: 50%;
     margin-bottom: 1rem;
     
     overflow: hidden;
