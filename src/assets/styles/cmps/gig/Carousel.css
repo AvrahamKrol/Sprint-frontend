@@ -33,7 +33,8 @@
 }
 
 .carousel button {
-    display: flex;
+    position: absolute;
+    display: none;
     align-items: center;
     justify-content: center;
     
@@ -41,10 +42,23 @@
     height: 40px;
     margin: .5em;
     
-    background: #9e9e9ee3;
+    color:rgb(110, 108, 108);
+    background-color: #fff;
     border: none;
     border-radius: 50%;
     font-size: 25px;
     cursor: pointer;
     z-index: 2;
+
+}
+
+.carousel:hover{
+    button{
+    display: flex;
+    /* transform: translateX(-50%); */
+    }
+}
+
+.carousel:hover .off{
+    display: none;
 }

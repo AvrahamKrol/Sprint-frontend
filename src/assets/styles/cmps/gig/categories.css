@@ -1,8 +1,6 @@
-.categories-container{
-    position: relative;
-}
 
 .categories{
+    position: relative;
     display: grid;
     grid-template-columns:repeat(5,1fr);
     justify-items: center;
@@ -21,10 +19,6 @@
         border: none;
     }
 
-    /* >button:hover{
-        border-bottom: 3px solid #1dbf73;
-    } */
-
     >button:hover::after{
         content: '';
         position: absolute;
@@ -40,7 +34,7 @@
 .tags {
     position: absolute;
     left: 0;
-    top: 44px;
+    top: 102%;
     display: flex;
     gap: 4em;
     
@@ -52,6 +46,7 @@
     background-color: #fff;
     border: 1px solid;
     border-top:none ;
+    z-index: 3;
 
     >li:hover{
         color:#93959e;

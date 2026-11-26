@@ -5,9 +5,8 @@ import { Carousel } from './Caruosel'
 export function GigPreview({ gig, shouldShowActionBtns }) {
   return (
     <article className="gig-preview">
-      <Carousel gig={gig} />
+        <Carousel gig={gig} />
 
-      
         <div>
         {gig.owner && (
           <div className="owner-name-div">
@@ -21,11 +20,11 @@ export function GigPreview({ gig, shouldShowActionBtns }) {
             <p className="gig-owner">{gig.owner.fullName} </p>
             </div>
             
-            <div className='level-div'>
+            <div className={
+            gig.owner.level==='top rated' ? 'level-div orange' : 'level-div'
+            } >
 
-            <p className={gig.owner.level===
-              
-            }>{gig.owner.level}</p>
+            <p >{gig.owner.level}</p>
 
 
             <div className='dimond-div'>

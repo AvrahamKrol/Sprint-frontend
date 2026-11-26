@@ -63,10 +63,14 @@
     padding-block: .2em;
     padding-bottom: .4em;
 
-    background-color:#ffe0b3;
+   
     border-radius: 4px;
     font-size: 14px;
     font-weight: 600;
+}
+
+.orange{
+    background-color:#ffe0b3;
 }
 
 .dimond-div{

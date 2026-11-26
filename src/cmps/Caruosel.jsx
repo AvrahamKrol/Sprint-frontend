@@ -7,7 +7,7 @@ export function Carousel({gig}){
     const imgs = [
         gig.imgUrls[0], 
         gig.imgUrls[1],
-        gig.imgUrls[2], 
+        gig.imgUrls[2],
     ]
 
     function nextImage() {
@@ -25,7 +25,7 @@ export function Carousel({gig}){
     return(
         <section style={{position:"relative"}} className="carousel">
 
-            <button style={{position:'absolute', left:0}} onClick={prevImage}>❮</button>
+            <button className={currentIndex===0 ? 'off' :''} style={{left:0}} onClick={prevImage}>❮</button>
 
             
                 <div
@@ -37,12 +37,12 @@ export function Carousel({gig}){
                 <img className="like" 
                 src="https://res.cloudinary.com/z6rg2bwn/image/upload/v1795360044/Heart--Streamline-Sharp-Remix.png" />
                     {imgs.map((img, idx) => (
-                        <img style={{maxHeight:'250px'}} key={idx} className="gig-img" src={img} alt=""/>
+                        <img key={idx} className="gig-img" src={img} alt=""/>
                     ))}
                 </div>
                 
 
-            <button style={{position:'absolute', right:0}} onClick={nextImage}>❯</button>
+            <button className={currentIndex===2 ? 'off' :''} style={{right:0}} onClick={nextImage}>❯</button>
 
         </section>
     )
