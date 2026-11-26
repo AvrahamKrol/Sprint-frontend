@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 import { Carousel } from './Caruosel'
 
-export function GigPreview({ gig }) {
+export function GigPreview({ gig, shouldShowActionBtns }) {
   return (
     <article className="gig-preview">
       <Carousel gig={gig} />
@@ -23,7 +23,10 @@ export function GigPreview({ gig }) {
             
             <div className='level-div'>
 
-            <p>{gig.owner.level}</p>
+            <p className={gig.owner.level===
+              
+            }>{gig.owner.level}</p>
+
 
             <div className='dimond-div'>
             <img className='dimond-img' src="/icons/diamond-icon.png" width={12} height={12} />
@@ -45,10 +48,17 @@ export function GigPreview({ gig }) {
 
         <div className="rate-div">
           <img className="rate-star" src="/icons/star.png" alt="" />
-          <p style={{paddingTop:'2px',fontWeight:700,color:'#222325'}}>{gig.owner.rate}</p>
+          <p className='rate-num'>{gig.owner.rate}</p>
         </div>
-
+        <div className='card-end'>
         <p className='price'>From <div className='flex'><img src="/icons/shekel-icon.png" alt="" />{gig.price}</div></p>
+        {shouldShowActionBtns(gig) && (
+              <div className="actions">
+                <button onClick={() => onUpdateGig(gig)}>Edit</button>
+                <button onClick={() => onRemoveGig(gig._id)}>x</button>
+              </div>
+            )}
+        </div>
       </div>
     </article>
   )

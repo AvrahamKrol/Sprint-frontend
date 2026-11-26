@@ -100,7 +100,7 @@ export function GigIndex() {
     <section className="gig-index">
 
       <Categories setFilterBy={setFilterBy} />
-      <button style={{ marginInline: 0 }} onClick={onAddGig}>
+      <button className='add-button' onClick={onAddGig}>
         Add a Gig
       </button>
       {/* <GigFilter filterBy={filterBy} setFilterBy={setFilterBy} /> */}
