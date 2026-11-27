@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useLocation, useNavigate } from 'react-router'
 import { useSelector } from 'react-redux'
@@ -13,6 +14,33 @@ export function AppHeader() {
   const filterBy = useSelector((storeState) => storeState.gigModule.filterBy)
   const navigate = useNavigate()
   const { pathname } = useLocation()
+
+  const isHome = pathname === '/'
+  const [isHeroSearchVisible, setIsHeroSearchVisible] = useState(true)
+
+  useEffect(() => {
+    if (!isHome) {
+      setIsHeroSearchVisible(false)
+      return
+    }
+
+    const heroSearch = document.querySelector('.search-bar--hero')
+
+    if (!heroSearch) {
+      setIsHeroSearchVisible(false)
+      return
+    }
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsHeroSearchVisible(entry.isIntersecting)
+      },
+      { threshold: 0, rootMargin: '-80px 0px 0px 0px' },
+    )
+    observer.observe(heroSearch)
+    return () => observer.disconnect()
+  }, [isHome])
+
+  const showHeaderSearch = !isHome || !isHeroSearchVisible
 
   function onSetFilterBy(filter) {
     if (filter.txt === filterBy.txt) return
@@ -32,11 +60,13 @@ export function AppHeader() {
   }
 
   return (
-    <header className="app-header">
+    <header className={`app-header full ${isHome ? 'sticky' : ''}`}>
       <NavLink to="/" className="logo">
         <img className="logo logo-img" src={logo} alt="logo image" />
       </NavLink>
-      <GigFilter filterBy={filterBy} setFilterBy={onSetFilterBy} />
+      {showHeaderSearch && (
+        <GigFilter filterBy={filterBy} setFilterBy={onSetFilterBy} />
+      )}
       {!user && (
         <div className="auth-actions">
           <NavLink to="auth/login" className="signin-link">

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
+import { SearchSuggestions } from './SearchSuggestions'
 
 import searchIcon from '../../public/icons/search-icon.svg'
 
-export function GigFilter({ cmpIn = 'header', filterBy, setFilterBy }) {
+export function GigFilter({ cmpStl = 'header', filterBy, setFilterBy }) {
   const [filterToEdit, setFilterToEdit] = useState(structuredClone(filterBy))
 
   useEffect(() => {
@@ -12,6 +13,18 @@ export function GigFilter({ cmpIn = 'header', filterBy, setFilterBy }) {
   function handleChange(ev) {
     const { name, value } = ev.target
     setFilterToEdit((prev) => ({ ...prev, [name]: value }))
+  }
+
+  function onSelectSuggestion(suggestion) {
+    setFilterToEdit((prev) => ({
+      ...prev,
+      txt: suggestion,
+    }))
+
+    setFilterBy({
+      ...filterToEdit,
+      txt: suggestion,
+    })
   }
 
   // function handleChange(ev) {
@@ -46,7 +59,7 @@ export function GigFilter({ cmpIn = 'header', filterBy, setFilterBy }) {
 
   return (
     <section className="gig-filter">
-      <form className={`search-bar search-bar--${cmpIn}`} onSubmit={onSubmit}>
+      <form className={`search-bar search-bar--${cmpStl}`} onSubmit={onSubmit}>
         <input
           type="search"
           placeholder="What service are you looking for today?"
@@ -58,6 +71,7 @@ export function GigFilter({ cmpIn = 'header', filterBy, setFilterBy }) {
           <img src={searchIcon} alt="search" />
         </button>
       </form>
+      {cmpStl === 'hero' && <SearchSuggestions onSelect={onSelectSuggestion} />}
       {/* <div>
       <h3>Filter:</h3>
       <input

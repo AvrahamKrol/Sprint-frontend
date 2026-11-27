@@ -1,7 +1,10 @@
 .gig-filter {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-self: stretch;
     flex: 1;
+    min-width: 0;
 
     .search-bar {
         display: flex;
@@ -13,7 +16,6 @@
             padding-block: 10px;
             letter-spacing: 1px;
             width: 40em;
-            height: inherit;
             outline: none;
             border: 1px solid var(--clr-gray);
             border-radius: var(--space-xs) 0 0 var(--space-xs);
@@ -27,6 +29,44 @@
         & button {
             min-width: 23px;
             border-radius: 0 var(--space-xs) var(--space-xs) 0;
+        }
+    }
+
+    .search-bar--hero {
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        background-color: rgba(248, 248, 246, 0.9);
+        display: grid;
+        grid-template-columns: 1fr 50px;
+        border-radius: 50px;
+        padding: 5px 16px 5px 32px;
+
+        input {
+            grid-column: 1 / -1;
+            grid-row: 1;
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            line-height: 24px;
+            color: var(--clr-black);
+            background-color: transparent;
+
+        }
+
+        button {
+            display: grid;
+            place-items: center;
+            grid-column: 2;
+            grid-row: 1;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: #222;
+            color: white;
+            border: none;
+            z-index: 1;
         }
     }
 }

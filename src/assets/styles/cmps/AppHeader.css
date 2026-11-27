@@ -1,9 +1,18 @@
 .app-header {
     display: flex;
     align-items: center;
+    gap: var(--space-md);
 
     margin-block: 5px;
     padding-block: var(--space-md);
+    padding-inline: 32px;
+
+    &.sticky {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background-color: white;
+    }
 
     & .logo {
         height: 2.8rem;
@@ -12,9 +21,9 @@
 
     & button {
         margin: 0;
-        padding: var(--space-sm) var(--space-md);
+        padding: 12px 30px;
         min-width: 88px;
-        font-size: var(--space-md);
+        font-size: 16px;
         line-height: 1.5em;
         border-radius: var(--space-sm);
     }
@@ -29,12 +38,11 @@
             color: var(--clr-black);
 
             &:hover {
-                background-color: var(--clr-gray-hov)
+                background-color: var(--clr-gray-hov);
             }
         }
 
         & .join-link button {
-            letter-spacing: 1px;
             border: 1px solid #000;
         }
     }
