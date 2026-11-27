@@ -10,20 +10,23 @@
 
 
     & li {
-        position: relative;
         display: grid;
         background-color: #fff;
         height: 100%;
 
         .actions {
-            position: absolute;
-            bottom: 1em;
-            right: 0;
-
-            & button {
-                padding: .3em .5em;
-            }
+            >button {
+        height: 20px;
+        padding: 0;
+        padding-inline: 8px;
+}
         }
+    }
+
+    .card-end{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 

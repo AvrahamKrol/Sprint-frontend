@@ -63,10 +63,14 @@
     padding-block: .2em;
     padding-bottom: .4em;
 
-    background-color:#ffe0b3;
+   
     border-radius: 4px;
     font-size: 14px;
     font-weight: 600;
+}
+
+.orange{
+    background-color:#ffe0b3;
 }
 
 .dimond-div{
@@ -90,6 +94,12 @@
    height: 20px;
 }
 
+.rate-num{
+    padding-top:2px;
+    font-weight:700;
+    color:#222325
+}
+
 .price{
     display: flex;
     gap: .5em;
@@ -107,53 +117,3 @@
 
 }
 
-.carousel {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    height: 50%;
-    margin-bottom: 1rem;
-    
-    overflow: hidden;
-}
-
-.carousel-track {
-    display: flex;
-    height: 100%;
-    
-    transition: transform 0.4s ease-in-out;
-}
-
-.like{
-    position: absolute;
-    top: 1.5em;
-    right:1.5em;
-    
-    width: 30px;
-    height: 30px;
-
-    z-index: 7;
-
-}
-
-.carousel-track img {
-    flex: 0 0 100%;
-    object-fit: cover;
-}
-
-.carousel button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    width: 40px;
-    height: 40px;
-    margin: .5em;
-    
-    background: #9e9e9ee3;
-    border: none;
-    border-radius: 50%;
-    font-size: 25px;
-    cursor: pointer;
-    z-index: 2;
-}

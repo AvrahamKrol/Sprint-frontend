@@ -23,9 +23,10 @@ export function Categories({setFilterBy}){
         <button onClick={()=>laodTags('videoAndAudio')}>Video And Audio</button>
         <button onClick={()=>laodTags('writingAndTranslation')}>Writing And Translation</button>
         <button onClick={()=>laodTags('digitalMarketing')}>Digital Marketing</button>
-    </div>
-    {tags && <ul className="tags" onClick={()=>setTags(null)}>
+        {tags && <ul className="tags" onClick={()=>setTags(null)}>
     {tags.map(tag =><li key={tag} onClick={()=>handelTagFilter(tag)}>{tag}</li>)}
     </ul> } 
+    </div>
+    
     </section>
 }
